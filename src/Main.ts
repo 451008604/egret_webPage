@@ -59,7 +59,8 @@ class Main extends eui.UILayer {
 
     private async runGame() {
         await this.loadResource()
-        this.createGameScene();
+        // this.createGameScene();
+        this.addChild(LayerManager.instance.init())
         const result = await RES.getResAsync("description_json")
         this.startAnimation(result);
         await platform.login();
