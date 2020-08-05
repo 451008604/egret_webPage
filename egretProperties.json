@@ -20,14 +20,12 @@
     },
     {
       "name": "promise"
-    },
-    {
-      "name": "WXCloudApi",
-      "path": "./libs/WXCloudApi"
-    },
-    {
-      "name": "egretmgobe",
-      "path": "./libs/egretmgobe"
     }
-  ]
+  ],
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins",
+      "resource/skin"
+    ]
+  }
 }

@@ -8,10 +8,15 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
+		"bin-debug/base/BaseScene.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/ThemeAdapter.js"
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/base/Config.js",
+		"bin-debug/magager/HttpManager.js",
+		"bin-debug/magager/LayerManager.js",
+		"bin-debug/page/UserPage.js"
 	]
 }
