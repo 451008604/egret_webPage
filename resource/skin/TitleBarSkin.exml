@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="TitleBarSkin"
-	 width="720"
+	 width="722"
 	height="85" xmlns:e="http://ns.egret.com/eui">
 	<e:Rect left="-1" right="-1" top="0" bottom="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xDCDCDC" strokeAlpha="1"/>
 	<e:Image id="exml_home" source="homepage_png" x="48" verticalCenter="0"/>
-	<e:Label id="exml_titleText" text="已开通 - 368 人" horizontalCenter="0" verticalCenter="0" textColor="0x000000" fontFamily="SimHei"/>
+	<e:Label id="exml_titleText" text="已开通 - 368 人" horizontalCenter="0" verticalCenter="0" textColor="0x000000" fontFamily="SimHei" size="26"/>
 </e:Skin>

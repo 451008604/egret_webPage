@@ -1,4 +1,12 @@
 declare module skins{
+	class Button1Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class Button2Skin extends eui.Skin{
+	}
+}
+declare module skins{
 	class ButtonSkin extends eui.Skin{
 	}
 }
@@ -35,6 +43,10 @@ declare module skins{
 	}
 }
 declare module skins{
+	class TextInput1Skin extends eui.Skin{
+	}
+}
+declare module skins{
 	class TextInputSkin extends eui.Skin{
 	}
 }
@@ -49,6 +61,12 @@ declare module skins{
 declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
+}
+declare class StudentEnabledPageSkin extends eui.Skin{
+}
+declare class StudentItemSkin extends eui.Skin{
+}
+declare class TitleBarSkin extends eui.Skin{
 }
 declare class UserPageSkin extends eui.Skin{
 }

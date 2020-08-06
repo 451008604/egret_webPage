@@ -24,7 +24,7 @@ class LayerManager {
     }
 
     init(): egret.DisplayObjectContainer {
-        this.showPage(PagesIndex.USER);
+        this.showPage(PagesIndex.STUDENT_ENABLED);
 
         return this.sceneLayer;
     }
@@ -39,6 +39,10 @@ class LayerManager {
             case PagesIndex.USER:
                 let userPage = new UserPage();
                 userPage.show();
+                break;
+            case PagesIndex.STUDENT_ENABLED:
+                let studentEnabledPage = new StudentEnabledPage();
+                studentEnabledPage.show();
                 break;
         }
     }

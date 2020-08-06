@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="StudentEnabledPageSkin"
+	 width="720"
+	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="exml_bg" left="0" right="0" fillColor="0xF3F3F3" visible="true" top="0" bottom="0" locked="true"/>
+	<ns1:TitleBar skinName="TitleBarSkin" y="0" visible="true" horizontalCenter="0" locked="true"/>
+	<e:Group y="84" visible="true" horizontalCenter="0" locked="true">
+		<e:Rect height="85" y="0" anchorOffsetY="0" visible="true" fillColor="0xFFFFFF" horizontalCenter="0" width="722" strokeColor="0xDCDCDC" strokeWeight="1"/>
+		<e:Button label="搜索" x="490" skinName="skins.Button1Skin" visible="true" verticalCenter="0"/>
+		<e:Button label="清除" x="605" skinName="skins.Button1Skin" visible="true" verticalCenter="0.5"/>
+		<e:Image source="search_png" x="20" verticalCenter="0"/>
+		<e:TextInput x="72" skinName="skins.TextInput1Skin" height="52" y="17" width="400"/>
+	</e:Group>
+	<e:Scroller id="exml_scroller" left="0" right="0" bottom="0" top="187" skinName="skins.ScrollerSkin">
+		<e:List id="exml_scrollerList" left="0" right="0" top="0" bottom="0">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" gap="20"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+</e:Skin>

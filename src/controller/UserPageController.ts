@@ -1,12 +1,12 @@
 class UserPageController {
 
     private _userPage: UserPage;
+    public get userPage(): UserPage {
+        return this._userPage;
+    }
     public set userPage(v: UserPage) {
         this._userPage = v;
         this.init();
-    }
-    public get userPage(): UserPage {
-        return this._userPage;
     }
 
     constructor() {
@@ -14,10 +14,10 @@ class UserPageController {
     }
 
     init() {
-
         this.userPage.exml_bg.height = GlobalCfg.instance.stageHeight;
         this.userPage.exml_touXiang.mask = this.userPage.exml_iconMask;
 
+        // this.requestData();
         this.updateView();
     }
 
