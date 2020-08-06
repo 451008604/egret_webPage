@@ -2,7 +2,6 @@ class LayerManager {
 
     private sceneLayer: egret.DisplayObjectContainer;
     private static _instance: LayerManager;
-
     static get instance(): LayerManager {
         if (!this._instance) {
             this._instance = new LayerManager();

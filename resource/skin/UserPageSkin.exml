@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="UserPageSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect top="0" bottom="0" left="0" right="0" fillColor="0xf3f3f3" locked="true"/>
+	<e:Group height="230" left="0" right="0">
+		<e:Rect anchorOffsetY="0" fillColor="0x099400" fillAlpha="1" left="0" right="0" top="0" bottom="0"/>
+		<e:Label id="exml_bianHao" text="组长编号：XXXX" x="20" y="23" size="23"/>
+		<e:Image id="exml_touXiang" width="95" height="95" y="36" source="egret_icon_png" visible="true" horizontalCenter="0"/>
+		<e:Rect id="exml_iconMask" width="95" height="95" y="36" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="999" ellipseHeight="999" visible="true" horizontalCenter="0" strokeColor="0xffffff"/>
+		<e:Rect id="exml_iconBorder" width="95" height="95" y="36" anchorOffsetX="0" anchorOffsetY="0" fillAlpha="0" ellipseWidth="999" ellipseHeight="999" visible="true" horizontalCenter="0" strokeWeight="5" strokeColor="0xFFFFFF"/>
+		<e:Button id="exml_yongHuMingCheng" label="userName" y="153.2" anchorOffsetX="0" width="142" anchorOffsetY="0" height="42" horizontalCenter="0">
+			<e:skinName>
+				<e:Skin width="143" height="45">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xd1d1d1" fillAlpha="0.34" ellipseWidth="20" ellipseHeight="20"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="23" text="userName" fontFamily="SimHei"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group y="230" left="0" right="0" locked="true">
+		<e:Group y="0" left="0" right="0" visible="true" x="0" scaleX="1" scaleY="1" height="225" locked="true">
+			<e:Rect anchorOffsetY="0" fillColor="0xffffff" left="0" right="0" top="0" bottom="0"/>
+			<e:Label text="温馨提示" y="22.65" textColor="0x000000" visible="true" size="33" fontFamily="SimHei" bold="true" horizontalCenter="0"/>
+			<e:Label id="exml_wenXinTiShi" text="1、本平台永久免费开号、预先跑量。\n2、系统定期自动禁用疑似逃费账号。\n3、客服QQ：" y="74.34" anchorOffsetX="0" width="640" anchorOffsetY="0" height="150" textColor="0xBB2C2C" lineSpacing="20" size="28" visible="true" fontFamily="SimHei" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group x="188" y="140" height="123" locked="true">
+			<e:Group id="exml_woYaoJiaoFei" x="0" y="0">
+				<e:Rect width="360" height="123" x="0" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc"/>
+				<e:Image y="16.31" source="addition_fill_png" x="154"/>
+				<e:Label text="我要交费" fontFamily="SimHei" textColor="0x686868" size="26" x="128" y="69"/>
+			</e:Group>
+			<e:Group id="exml_jiaoFeiJiLu" x="360" y="0">
+				<e:Rect width="360" height="123" x="0" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc"/>
+				<e:Image y="16.31" source="success_fill_png" x="154"/>
+				<e:Label text="交费纪录" fontFamily="SimHei" textColor="0x686868" size="26" x="128" y="69"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="200" height="289" x="189" y="290" anchorOffsetY="0" locked="true">
+			<e:Group x="-5" y="0">
+				<e:Rect height="76" fillColor="0xffffff" anchorOffsetY="0" strokeWeight="1" strokeColor="0xdcdcdc" y="0" horizontalCenter="0" width="730"/>
+				<e:Group x="27" y="19">
+				<e:Image source="people_fill_png" x="0" y="0" anchorOffsetX="0" width="38" anchorOffsetY="0" height="38"/>
+				<e:Label text="我的好友" x="46" y="6" textColor="0xfd7302" fontFamily="SimHei" size="26"/>
+				</e:Group>
+				<e:Group id="exml_yaoQingHaoYou" x="575" y="15">
+				<e:Label text="邀请好友" x="0" textColor="0xa9a7a9" fontFamily="SimHei" size="26" y="10"/>
+				<e:Image source="enter_png" x="94.15" y="0" anchorOffsetX="0" width="45.2" anchorOffsetY="0" height="45.2"/>
+				</e:Group>
+			</e:Group>
+			<e:Group x="-5" y="75">
+				<e:Rect height="77" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc" horizontalCenter="0" width="730"/>
+				<e:Group x="27" y="20">
+					<e:Image source="addition_fill1_png" x="0" y="0" anchorOffsetX="0" width="38" anchorOffsetY="0" height="38"/>
+					<e:Label text="组长自行开号名额" x="46" textColor="0xfd7302" fontFamily="SimHei" size="26" y="6"/>
+				</e:Group>
+				<e:Label id="exml_openQuota" text="0 人" x="653.15" textColor="0xa9a7a9" fontFamily="SimHei" size="26" y="26"/>
+			</e:Group>
+			<e:Group x="0" y="151">
+				<e:Group x="0" y="0">
+					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" x="0"/>
+					<e:Label id="exml_daiShenHe" text="115" y="26" textColor="0xa9a7a9" size="26" horizontalCenter="0" fontFamily="SimHei"/>
+					<e:Label text="待审核" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+				<e:Group x="239" y="0">
+					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="242" x="0"/>
+					<e:Label id="exml_yiKaiTong" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+					<e:Label text="已开通" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+				<e:Group y="0" width="240" horizontalCenter="240">
+					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" horizontalCenter="0"/>
+					<e:Label id="exml_yiJinYong" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+					<e:Label text="已禁用" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:Group width="200" height="173" x="199" y="300" anchorOffsetY="0" locked="true">
+			<e:Group x="-5" y="0">
+				<e:Rect width="730" height="75" y="0" fillColor="0xffffff" anchorOffsetY="0" strokeWeight="1" horizontalCenter="0" strokeColor="0xdcdcdc"/>
+				<e:Group x="27" y="19">
+					<e:Image source="transaction_fill_png" x="0" y="0" width="38" height="38"/>
+					<e:Label text="我的钱包" x="46" y="6" textColor="0xfd7302" fontFamily="SimHei" size="26"/>
+				</e:Group>
+				<e:Label id="exml_zhangHuYuE" text="账户余额：￥39.68" textColor="0xA9A7A9" size="26" fontFamily="Microsoft YaHei" scaleX="1" scaleY="1" x="480" y="25"/>
+			</e:Group>
+			<e:Group y="74" horizontalCenter="-240">
+				<e:Rect width="240" height="100" y="0" anchorOffsetY="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc" horizontalCenter="0"/>
+				<e:Label id="exml_shenQingTiXian" text="申请提现" textColor="0xa9a7a9" size="26" fontFamily="SimHei" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group y="74" horizontalCenter="0">
+				<e:Rect width="242" height="100" y="0" anchorOffsetY="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" horizontalCenter="0"/>
+				<e:Label id="exml_tiXianJiLu" text="提现记录" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group y="74" horizontalCenter="240">
+				<e:Rect width="240" height="100" y="0" anchorOffsetY="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" horizontalCenter="0"/>
+				<e:Label id="exml_tiChengJiLu" text="提成纪录" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="200" height="200" x="67" y="872" scaleX="1" scaleY="1" locked="true">
+			<e:Group y="0" horizontalCenter="0">
+				<e:Rect height="75" y="0" anchorOffsetY="0" fillColor="0xffffff" width="730" horizontalCenter="0" strokeWeight="1" strokeColor="0xdcdcdc"/>
+				<e:Group x="27" y="19">
+					<e:Image source="stealth_fill_png" x="0" width="38" height="38" y="0"/>
+					<e:Label text="跑量概况" x="46" textColor="0xFD7302" fontFamily="SimHei" size="26" y="6"/>
+				</e:Group>
+				<e:Group id="exml_paoLiangJiLu" x="575" scaleX="1" scaleY="1" y="15">
+					<e:Label text="跑量记录" x="0" textColor="0xA9A7A9" fontFamily="SimHei" size="26" y="10"/>
+					<e:Image source="enter_png" x="94.15" y="0" anchorOffsetX="0" width="45.2" anchorOffsetY="0" height="45.2"/>
+				</e:Group>
+			</e:Group>
+			<e:Group x="0" y="74" scaleX="1" scaleY="1">
+				<e:Group x="0" y="0">
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" x="0"/>
+				<e:Label id="exml_paoliangText1" text="115" y="26" textColor="0xA9A7A9" size="26" horizontalCenter="0" fontFamily="SimHei"/>
+				<e:Label text="今日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+				<e:Group x="239" y="0">
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="242" x="0"/>
+				<e:Label id="exml_paoliangText2" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				<e:Label text="昨日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+				<e:Group y="0" width="240" horizontalCenter="240">
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" horizontalCenter="0"/>
+				<e:Label id="exml_paoliangText3" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				<e:Label text="剩余需求" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="justify" gap="10"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>
