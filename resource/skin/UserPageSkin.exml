@@ -16,7 +16,7 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group y="230" left="0" right="0" locked="true">
+	<e:Group y="230" left="0" right="0">
 		<e:Group y="0" left="0" right="0" visible="true" x="0" scaleX="1" scaleY="1" height="225">
 			<e:Rect anchorOffsetY="0" fillColor="0xffffff" left="0" right="0" top="0" bottom="0"/>
 			<e:Label text="温馨提示" y="22.65" textColor="0x000000" visible="true" size="33" fontFamily="SimHei" bold="true" horizontalCenter="0"/>
@@ -61,17 +61,17 @@
 				<e:Label id="exml_kaiHaoMingE" text="0 人" textColor="0xa9a7a9" fontFamily="SimHei" size="26" y="26" right="25"/>
 			</e:Group>
 			<e:Group x="0" y="151">
-				<e:Group x="0" y="0">
+				<e:Group id="exml_checkPending" x="0" y="0">
 					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" x="0"/>
 					<e:Label id="exml_daiShenHe" text="115" y="26" textColor="0xa9a7a9" size="26" horizontalCenter="0" fontFamily="SimHei"/>
 					<e:Label text="待审核" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
 				</e:Group>
-				<e:Group x="239" y="0">
+				<e:Group id="exml_enabled" x="239" y="0">
 					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="242" x="0"/>
 					<e:Label id="exml_yiKaiTong" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
 					<e:Label text="已开通" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
 				</e:Group>
-				<e:Group y="0" width="240" horizontalCenter="240">
+				<e:Group id="exml_disabled" y="0" width="240" horizontalCenter="240">
 					<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" horizontalCenter="0"/>
 					<e:Label id="exml_yiJinYong" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
 					<e:Label text="已禁用" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>

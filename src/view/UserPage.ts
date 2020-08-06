@@ -9,8 +9,11 @@ class UserPage extends BaseScene {
     public exml_jiaoFeiJiLu: eui.Group;
     public exml_yaoQingHaoYou: eui.Group;
     public exml_kaiHaoMingE: eui.Label;
+    public exml_checkPending: eui.Group;
     public exml_daiShenHe: eui.Label;
+    public exml_enabled: eui.Group;
     public exml_yiKaiTong: eui.Label;
+    public exml_disabled: eui.Group;
     public exml_yiJinYong: eui.Label;
     public exml_zhangHuYuE: eui.Label;
     public exml_shenQingTiXian: eui.Group;
@@ -20,6 +23,7 @@ class UserPage extends BaseScene {
     public exml_paoliangText1: eui.Label;
     public exml_paoliangText2: eui.Label;
     public exml_paoliangText3: eui.Label;
+
 
     private controller: UserPageController = new UserPageController();
 
@@ -40,6 +44,9 @@ class UserPage extends BaseScene {
         this.exml_tiXianJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiXianJiLuTouchHandler, this);
         this.exml_tiChengJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiChengJiLuTouchHandler, this);
         this.exml_paoLiangJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLuTouchHandler, this);
+        this.exml_checkPending.addEventListener(egret.TouchEvent.TOUCH_TAP, this.checkPendingTouchHandler, this);
+        this.exml_enabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.enabledTouchHandler, this);
+        this.exml_disabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.disabledTouchHandler, this);
     }
 
     senMsg() {
@@ -59,6 +66,21 @@ class UserPage extends BaseScene {
     /**邀请好友 */
     private yaoQingHaoYouTouchHandler(e: egret.TouchEvent) {
         console.log("邀请好友");
+    }
+
+    /**待审核 */
+    private checkPendingTouchHandler(e: egret.TouchEvent) {
+        console.log("待审核");
+    }
+
+    /**已开通 */
+    private enabledTouchHandler(e: egret.TouchEvent) {
+        console.log("已开通");
+    }
+
+    /**已禁用 */
+    private disabledTouchHandler(e: egret.TouchEvent) {
+        console.log("已禁用");
     }
 
     /**申请提现 */
