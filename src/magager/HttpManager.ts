@@ -7,7 +7,7 @@ class HttpManager {
         return this._instance;
     }
 
-    private callBackDic: Map<number, Function>
+    private callBackDic: Map<number, { func: Function, obj: Object }>
     constructor() {
         this.callBackDic = new Map();
     }
@@ -16,9 +16,10 @@ class HttpManager {
      * 发送http请求
      * @param data 请求数据 
      * @param callback 请求回调
+     * @param thisObj 作用域
      * @param method 强求类型 默认GET
      */
-    sendMessage(data: object, callback: Function, method: string = egret.HttpMethod.GET): void {
+    sendMessage(data: object, callback: Function, thisObj: Object, method: string = egret.HttpMethod.GET): void {
         let dataStr: string = JSON.stringify(data);
         if (method == egret.HttpMethod.GET) {
             Config.url += "?jsonBody=" + dataStr;
@@ -32,7 +33,7 @@ class HttpManager {
         request.addEventListener(egret.IOErrorEvent.IO_ERROR, this.errorHandler, this);
         request.send(dataStr);
 
-        this.callBackDic.set(request.hashCode, callback);
+        this.callBackDic.set(request.hashCode, { func: callback, obj: thisObj });
     }
 
     private completeHandler(evt: egret.Event): void {
@@ -40,9 +41,10 @@ class HttpManager {
         let request: egret.HttpRequest = evt.target as egret.HttpRequest;
         let data: Object = JSON.parse(request.response);
 
-        let backFun: Function = this.callBackDic.get(request.hashCode);
+        let backFun: Function = this.callBackDic.get(request.hashCode).func;
+        let thisObj: Object = this.callBackDic.get(request.hashCode).obj;
+        backFun(data).bind(thisObj);
         this.callBackDic.delete(request.hashCode);
-        backFun(data);
     }
 
     private progressHandler(evt: egret.ProgressEvent): void {
