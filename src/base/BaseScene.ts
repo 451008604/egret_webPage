@@ -1,8 +1,10 @@
-class BaseScene extends eui.Component {
+abstract class BaseScene extends eui.Component {
     constructor() {
         super();
     }
-
+    /**
+     * 子类不需要复写
+     */
     createChildren(): void {
         super.createChildren();
     }
@@ -16,5 +18,8 @@ class BaseScene extends eui.Component {
     hide(): void {
         LayerManager.instance.removeUi(this);
     }
+    
+    /**发送消息在这里面 */
+    abstract senMsg(): void;
 
 }

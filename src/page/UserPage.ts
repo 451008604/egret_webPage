@@ -34,4 +34,9 @@ class UserPage extends BaseScene {
         this.exml_bianHao.text = "组长编号：";
         this.exml_zhangHuYuE.text = "账户余额：￥";
     }
+
+
+    senMsg(): void {
+        
+    }
 }
