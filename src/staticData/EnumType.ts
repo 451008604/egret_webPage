@@ -1,0 +1,4 @@
+enum PagesIndex {
+    HOME,
+    USER,
+}

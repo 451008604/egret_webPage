@@ -16,9 +16,9 @@ abstract class BaseScene extends eui.Component {
 
     /**关闭 */
     hide(): void {
-        LayerManager.instance.removeUi(this);
+        LayerManager.instance.removeUI(this);
     }
-    
+
     /**发送消息在这里面 */
     abstract senMsg(): void;
 

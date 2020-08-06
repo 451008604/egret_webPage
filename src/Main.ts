@@ -29,24 +29,18 @@ class Main extends eui.UILayer {
 
     private async runGame() {
         await this.loadResource()
-        this.addChild(LayerManager.instance.init());
-        LayerManager.instance.addUI(new UserPage())
-        // const result = await RES.getResAsync("description_json")
-        // this.startAnimation(result);
-        // await platform.login();
-        // const userInfo = await platform.getUserInfo();
-        // console.log(userInfo);
 
+        egret.ImageLoader.crossOrigin = "anonymous";
+        GlobalCfg.instance.stageHeight = this.stage.stageHeight;
+        GlobalCfg.instance.stageWidth = this.stage.stageWidth;
+        this.addChild(LayerManager.instance.init());
     }
 
     private async loadResource() {
         try {
-            const loadingView = new LoadingUI();
-            this.stage.addChild(loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");
             await this.loadTheme();
-            await RES.loadGroup("preload", 0, loadingView);
-            this.stage.removeChild(loadingView);
+            await RES.loadGroup("preload", 0);
         }
         catch (e) {
             console.error(e);

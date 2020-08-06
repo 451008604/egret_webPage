@@ -19,12 +19,28 @@ class LayerManager {
     }
 
     /**移除界面 */
-    removeUi(panel: BaseScene): void {
+    removeUI(panel: BaseScene): void {
         this.sceneLayer.removeChild(panel);
     }
 
     init(): egret.DisplayObjectContainer {
+        this.showPage(PagesIndex.USER);
+
         return this.sceneLayer;
+    }
+
+
+    showPage(index) {
+        this.sceneLayer.removeChildren();
+        switch (index) {
+            case PagesIndex.HOME:
+
+                break;
+            case PagesIndex.USER:
+                let userPage = new UserPage();
+                userPage.show();
+                break;
+        }
     }
 
 }

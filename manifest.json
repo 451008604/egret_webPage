@@ -9,14 +9,19 @@
 	],
 	"game": [
 		"bin-debug/base/BaseScene.js",
-		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/base/Config.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
+		"bin-debug/Test.js",
 		"bin-debug/ThemeAdapter.js",
-		"bin-debug/base/Config.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/controller/UserPageController.js",
 		"bin-debug/magager/HttpManager.js",
 		"bin-debug/magager/LayerManager.js",
-		"bin-debug/page/UserPage.js"
+		"bin-debug/model/UserPageData.js",
+		"bin-debug/staticData/EnumType.js",
+		"bin-debug/staticData/GlobalCfg.js",
+		"bin-debug/view/UserPage.js"
 	]
 }

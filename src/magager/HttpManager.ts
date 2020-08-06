@@ -14,7 +14,7 @@ class HttpManager {
 
     /**
      * 发送http请求
-     * @param data 请求数据 
+     * @param data 请求数据
      * @param callback 请求回调
      * @param thisObj 作用域
      * @param method 强求类型 默认GET
