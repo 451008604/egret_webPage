@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<e:Skin class="skins.Button2Skin" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
-	<e:Rect id="exml_bg" left="0" right="0" top="0" bottom="0" strokeWeight="2" ellipseWidth="10" ellipseHeight="10" fillColor="0x13b505" strokeColor="0x119b04" strokeAlpha="0.5" visible="true"/>
-    <e:Label id="labelDisplay" top="8" bottom="8" left="8" right="8"
+<e:Skin class="skins.Button2Skin" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect id="exml_bg" strokeWeight="2" ellipseWidth="10" ellipseHeight="10" fillColor="0x13b505" strokeColor="0x119b04" strokeAlpha="0.5" visible="true" left="-10" right="-10" top="0" bottom="0"/>
+    <e:Label id="labelDisplay"
              size="18"
-             verticalAlign="middle" textAlign="center" fontFamily="SimHei" textColor="0xffffff"/>
+             verticalAlign="middle" textAlign="center" fontFamily="SimHei" textColor="0xffffff" top="8" bottom="8" left="8" right="8"/>
     <e:Image id="iconDisplay" horizontalCenter="0" verticalCenter="0"/>
 </e:Skin>

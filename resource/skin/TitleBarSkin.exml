@@ -2,7 +2,8 @@
 <e:Skin class="TitleBarSkin"
 	 width="722"
 	height="85" xmlns:e="http://ns.egret.com/eui">
-	<e:Rect left="-1" right="-1" top="0" bottom="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xDCDCDC" strokeAlpha="1"/>
-	<e:Image id="exml_home" source="homepage_png" x="48" verticalCenter="0"/>
+	<e:Rect top="0" bottom="0" fillColor="0xFFFFFF" strokeWeight="2" strokeColor="0xDCDCDC" strokeAlpha="1" visible="true" left="-3" right="-3"/>
+	<e:Image id="exml_home" source="homepage_png" verticalCenter="0" left="25" visible="true"/>
 	<e:Label id="exml_titleText" text="已开通 - 368 人" horizontalCenter="0" verticalCenter="0" textColor="0x000000" fontFamily="SimHei" size="26"/>
+	<e:Image id="exml_set" source="setup_png" verticalCenter="0" visible="true" right="25"/>
 </e:Skin>

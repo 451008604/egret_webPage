@@ -4,9 +4,13 @@ class UserPage extends BaseScene {
     public exml_touXiang: eui.Image;
     public exml_iconMask: eui.Rect;
     public exml_yongHuMingCheng: eui.Button;
+    public exml_infoGroup: eui.Group;
+    public exml_item1: eui.Group;
     public exml_wenXinTiShi: eui.Label;
+    public exml_item2: eui.Group;
     public exml_woYaoJiaoFei: eui.Group;
     public exml_jiaoFeiJiLu: eui.Group;
+    public exml_item3: eui.Group;
     public exml_yaoQingHaoYou: eui.Group;
     public exml_kaiHaoMingE: eui.Label;
     public exml_checkPending: eui.Group;
@@ -15,17 +19,19 @@ class UserPage extends BaseScene {
     public exml_yiKaiTong: eui.Label;
     public exml_disabled: eui.Group;
     public exml_yiJinYong: eui.Label;
+    public exml_item4: eui.Group;
     public exml_zhangHuYuE: eui.Label;
     public exml_shenQingTiXian: eui.Group;
     public exml_tiXianJiLu: eui.Group;
     public exml_tiChengJiLu: eui.Group;
+    public exml_item5: eui.Group;
     public exml_paoLiangJiLu: eui.Group;
     public exml_paoliangText1: eui.Label;
     public exml_paoliangText2: eui.Label;
     public exml_paoliangText3: eui.Label;
 
 
-    private controller: UserPageController = new UserPageController();
+    public controller;
 
     constructor() {
         super();
@@ -35,7 +41,9 @@ class UserPage extends BaseScene {
     show() {
         super.show();
 
-        this.controller.userPage = this;
+        this.controller = new UserPageController();
+        let controller = (this.controller as UserPageController);
+        controller.userPage = this;
 
         this.exml_woYaoJiaoFei.addEventListener(egret.TouchEvent.TOUCH_TAP, this.woYaoJiaoFeiTouchHandler, this);
         this.exml_jiaoFeiJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.jiaoFeiJiLuTouchHandler, this);

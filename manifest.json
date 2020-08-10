@@ -9,23 +9,29 @@
 	],
 	"game": [
 		"bin-debug/base/BaseScene.js",
-		"bin-debug/controller/StudentEnabledPageController.js",
+		"bin-debug/view/UserPage.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/base/Config.js",
+		"bin-debug/component/OrderFromItem.js",
 		"bin-debug/component/StudentItem.js",
 		"bin-debug/component/TitleBar.js",
+		"bin-debug/controller/OrderFromPageController.js",
+		"bin-debug/controller/StudentEnabledPageController.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/controller/UserPageController.js",
 		"bin-debug/magager/HttpManager.js",
 		"bin-debug/magager/LayerManager.js",
+		"bin-debug/model/OrderFromItemData.js",
 		"bin-debug/model/StudentItemData.js",
 		"bin-debug/model/UserPageData.js",
 		"bin-debug/staticData/EnumType.js",
 		"bin-debug/staticData/GlobalCfg.js",
+		"bin-debug/view/OrderFromPage.js",
 		"bin-debug/view/StudentEnabledPage.js",
-		"bin-debug/view/UserPage.js"
+		"bin-debug/view/UserHomePage.js",
+		"bin-debug/controller/UserHomePageController.js"
 	]
 }

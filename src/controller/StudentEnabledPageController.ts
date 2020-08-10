@@ -12,7 +12,6 @@ class StudentEnabledPageController {
     private infoList: StudentItemData[] = [];
 
     constructor() {
-
     }
 
     init() {
@@ -31,7 +30,7 @@ class StudentEnabledPageController {
 
     requestData() {
         // HttpManager.instance.sendMessage(null, (res) => {
-        for (let item of temp) {
+        for (let item of studentTempList) {
             this.infoList.push(new StudentItemData(item));
         }
         this.arrayCollection.replaceAll(this.infoList);
@@ -45,7 +44,7 @@ class StudentEnabledPageController {
 
 
 // 模拟数据
-let temp = [{
+let studentTempList = [{
     exml_xueYuanBianHao: "1549",
     exml_tip: "正常",
     exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",

@@ -1,5 +1,8 @@
 enum PagesIndex {
     HOME,
     USER,
-    STUDENT_ENABLED
+    USERHOME,
+    SET,
+    STUDENT_ENABLED,
+    ORDERFROM
 }

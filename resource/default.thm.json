@@ -32,7 +32,9 @@
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
+		"resource/skin/OrderFromItemSkin.exml",
 		"resource/skin/TitleBarSkin.exml",
+		"resource/skin/OrderFromPageSkin.exml",
 		"resource/skin/StudentEnabledPageSkin.exml",
 		"resource/skin/StudentItemSkin.exml",
 		"resource/skin/UserPageSkin.exml"

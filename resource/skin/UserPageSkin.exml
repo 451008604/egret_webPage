@@ -16,13 +16,13 @@
 			</e:skinName>
 		</e:Button>
 	</e:Group>
-	<e:Group y="230" left="0" right="0">
-		<e:Group y="0" left="0" right="0" visible="true" x="0" scaleX="1" scaleY="1" height="225">
+	<e:Group id="exml_infoGroup" y="230" left="0" right="0" visible="true">
+		<e:Group id="exml_item1" y="0" left="0" right="0" visible="true" x="0" scaleX="1" scaleY="1" height="225">
 			<e:Rect anchorOffsetY="0" fillColor="0xffffff" left="0" right="0" top="0" bottom="0"/>
 			<e:Label text="温馨提示" y="22.65" textColor="0x000000" visible="true" size="33" fontFamily="SimHei" bold="true" horizontalCenter="0"/>
 			<e:Label id="exml_wenXinTiShi" text="1、本平台永久免费开号、预先跑量。\n2、系统定期自动禁用疑似逃费账号。\n3、客服QQ：" y="74.34" anchorOffsetX="0" width="640" anchorOffsetY="0" height="150" textColor="0xBB2C2C" lineSpacing="20" size="28" visible="true" fontFamily="SimHei" horizontalCenter="0"/>
 		</e:Group>
-		<e:Group x="188" y="140" height="123">
+		<e:Group id="exml_item2" x="188" y="140" height="123" visible="true">
 			<e:Group id="exml_woYaoJiaoFei" x="0" y="0">
 				<e:Rect width="360" height="123" x="0" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc"/>
 				<e:Image y="16.31" source="addition_fill_png" x="154"/>
@@ -37,7 +37,7 @@
 				<e:HorizontalLayout gap="0"/>
 			</e:layout>
 		</e:Group>
-		<e:Group width="200" height="289" x="189" y="290" anchorOffsetY="0" visible="true">
+		<e:Group id="exml_item3" width="200" height="289" x="189" y="290" anchorOffsetY="0" visible="true">
 			<e:Group x="-5" y="0">
 				<e:Rect height="76" fillColor="0xffffff" anchorOffsetY="0" strokeWeight="1" strokeColor="0xdcdcdc" y="0" horizontalCenter="0" width="730"/>
 				<e:Group x="27" y="19">
@@ -78,7 +78,7 @@
 				</e:Group>
 			</e:Group>
 		</e:Group>
-		<e:Group width="200" height="173" x="199" y="300" anchorOffsetY="0" visible="true">
+		<e:Group id="exml_item4" width="200" height="173" x="199" y="300" anchorOffsetY="0" visible="true">
 			<e:Group x="-5" y="0">
 				<e:Rect width="730" height="75" y="0" fillColor="0xffffff" anchorOffsetY="0" strokeWeight="1" horizontalCenter="0" strokeColor="0xdcdcdc"/>
 				<e:Group x="27" y="19">
@@ -100,7 +100,7 @@
 				<e:Label text="提成纪录" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0" verticalCenter="0"/>
 			</e:Group>
 		</e:Group>
-		<e:Group width="200" height="200" x="67" y="872" scaleX="1" scaleY="1" visible="true">
+		<e:Group id="exml_item5" width="200" height="200" x="67" y="872" scaleX="1" scaleY="1" visible="true">
 			<e:Group y="0" horizontalCenter="0">
 				<e:Rect height="75" y="0" anchorOffsetY="0" fillColor="0xffffff" width="730" horizontalCenter="0" strokeWeight="1" strokeColor="0xdcdcdc"/>
 				<e:Group x="27" y="19">
@@ -134,7 +134,7 @@
 			</e:Group>
 		</e:Group>
 		<e:layout>
-			<e:VerticalLayout horizontalAlign="justify" gap="10"/>
+			<e:VerticalLayout horizontalAlign="justify" gap="10" verticalAlign="top"/>
 		</e:layout>
 	</e:Group>
 </e:Skin>

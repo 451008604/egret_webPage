@@ -62,6 +62,10 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
+declare class OrderFromItemSkin extends eui.Skin{
+}
+declare class OrderFromPageSkin extends eui.Skin{
+}
 declare class StudentEnabledPageSkin extends eui.Skin{
 }
 declare class StudentItemSkin extends eui.Skin{
