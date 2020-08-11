@@ -74,3 +74,5 @@ declare class TitleBarSkin extends eui.Skin{
 }
 declare class UserPageSkin extends eui.Skin{
 }
+declare class UserPaySkin extends eui.Skin{
+}

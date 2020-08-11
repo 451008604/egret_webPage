@@ -23,8 +23,5 @@ class OrderFromItemData {
                 this[i] = value[this.propertyMap[i]];
             }
         }
-
-        this.exml_biaoTi = "备注：" + this.exml_biaoTi;
-        this.exml_yueDuCiShu = "阅读次数：" + this.exml_yueDuCiShu;
     }
 }

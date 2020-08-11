@@ -33,12 +33,5 @@ class StudentItemData {
                 this[i] = value[this.propertyMap[i]];
             }
         }
-        this.exml_xueYuanBianHao = "学员编号：" + this.exml_xueYuanBianHao;
-        this.exml_zongPaoLiang = "总跑量：" + this.exml_zongPaoLiang;
-        this.exml_zongJiaoFei = "总交费：￥" + this.exml_zongJiaoFei;
-        this.exml_zuiHouXiaDan = "最后下单：" + this.exml_zuiHouXiaDan;
-        this.exml_zuiHouJiaoFei = "最后交费：" + this.exml_zuiHouJiaoFei;
-        this.exml_beiZhu = "备注：" + this.exml_beiZhu;
-        this.exml_jiaRuRiQi = "加入日期：" + this.exml_jiaRuRiQi;
     }
 }

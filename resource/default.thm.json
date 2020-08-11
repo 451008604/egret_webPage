@@ -37,7 +37,8 @@
 		"resource/skin/OrderFromPageSkin.exml",
 		"resource/skin/StudentEnabledPageSkin.exml",
 		"resource/skin/StudentItemSkin.exml",
-		"resource/skin/UserPageSkin.exml"
+		"resource/skin/UserPageSkin.exml",
+		"resource/skin/UserPaySkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }

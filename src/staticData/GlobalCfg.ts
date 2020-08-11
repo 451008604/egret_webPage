@@ -13,4 +13,7 @@ class GlobalCfg {
 
     stageHeight: number = 0;
     stageWidth: number = 0;
+
+    /**用户信息 */
+    UserInfo: UserPageData;
 }

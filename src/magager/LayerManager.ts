@@ -24,7 +24,7 @@ class LayerManager {
     }
 
     init(): egret.DisplayObjectContainer {
-        this.showPage(PagesIndex.USERHOME);
+        this.showPage(PagesIndex.USER);
 
         return this.sceneLayer;
     }

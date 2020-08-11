@@ -41,10 +41,6 @@ class UserPage extends BaseScene {
     show() {
         super.show();
 
-        this.controller = new UserPageController();
-        let controller = (this.controller as UserPageController);
-        controller.userPage = this;
-
         this.exml_woYaoJiaoFei.addEventListener(egret.TouchEvent.TOUCH_TAP, this.woYaoJiaoFeiTouchHandler, this);
         this.exml_jiaoFeiJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.jiaoFeiJiLuTouchHandler, this);
         this.exml_yaoQingHaoYou.addEventListener(egret.TouchEvent.TOUCH_TAP, this.yaoQingHaoYouTouchHandler, this);
@@ -55,6 +51,14 @@ class UserPage extends BaseScene {
         this.exml_checkPending.addEventListener(egret.TouchEvent.TOUCH_TAP, this.checkPendingTouchHandler, this);
         this.exml_enabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.enabledTouchHandler, this);
         this.exml_disabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.disabledTouchHandler, this);
+
+        this.init();
+    }
+
+    init() {
+        this.controller = new UserPageController();
+        let controller = (this.controller as UserPageController);
+        controller.userPage = this;
     }
 
     senMsg() {

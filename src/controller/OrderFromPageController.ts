@@ -17,6 +17,7 @@ class OrderFromPageController {
     }
 
     init() {
+        this.orderFromPage.exml_titleBar.exml_titleText.text = "我的订单 - 所有状态";
         this.orderFromPage.exml_scroller.horizontalScrollBar.autoVisibility = false;
         this.orderFromPage.exml_scroller.horizontalScrollBar.visible = false;
         this.orderFromPage.exml_scroller.verticalScrollBar.autoVisibility = false;

@@ -3,7 +3,7 @@
 	 width="720"
 	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Rect id="exml_bg" left="0" right="0" fillColor="0xF3F3F3" visible="true" top="0" bottom="0" locked="true"/>
-	<ns1:TitleBar skinName="TitleBarSkin" visible="true" top="0" horizontalCenter="0"/>
+	<ns1:TitleBar id="exml_titleBar" skinName="TitleBarSkin" visible="true" top="0" horizontalCenter="0"/>
 	<e:Scroller id="exml_scroller" left="0" right="0" bottom="0" top="102" skinName="skins.ScrollerSkin">
 		<e:List id="exml_scrollerList" left="0" right="0" top="0" bottom="0">
 			

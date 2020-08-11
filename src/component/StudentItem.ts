@@ -32,14 +32,14 @@ class StudentItem extends eui.ItemRenderer {
 
 		this.exml_tip.label = "" + this.model.exml_tip;
 		this.exml_icon.source = "" + this.model.exml_icon;
-		this.exml_xueYuanBianHao.text = "" + this.model.exml_xueYuanBianHao;
 		this.exml_yongHuMing.text = "" + this.model.exml_yongHuMing;
-		this.exml_zongPaoLiang.text = "" + this.model.exml_zongPaoLiang;
-		this.exml_zongJiaoFei.text = "" + this.model.exml_zongJiaoFei;
-		this.exml_zuiHouXiaDan.text = "" + this.model.exml_zuiHouXiaDan;
-		this.exml_zuiHouJiaoFei.text = "" + this.model.exml_zuiHouJiaoFei;
-		this.exml_beiZhu.text = "" + this.model.exml_beiZhu;
-		this.exml_jiaRuRiQi.text = "" + this.model.exml_jiaRuRiQi;
+		this.exml_xueYuanBianHao.text = "学员编号：" + this.model.exml_xueYuanBianHao;
+		this.exml_zongPaoLiang.text = "总跑量：" + this.model.exml_zongPaoLiang;
+		this.exml_zongJiaoFei.text = "总交费：￥" + this.model.exml_zongJiaoFei;
+		this.exml_zuiHouXiaDan.text = "最后下单：" + this.model.exml_zuiHouXiaDan;
+		this.exml_zuiHouJiaoFei.text = "最后交费：" + this.model.exml_zuiHouJiaoFei;
+		this.exml_beiZhu.text = "备注：" + this.model.exml_beiZhu;
+		this.exml_jiaRuRiQi.text = "加入日期：" + this.model.exml_jiaRuRiQi;
 
 		if (this.model.exml_tip == "正常") {
 			(this.exml_tip["exml_bg"] as eui.Rect).fillColor = 0x13b505;

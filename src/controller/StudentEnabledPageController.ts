@@ -1,4 +1,4 @@
-class StudentEnabledPageController {
+class StudentEnabledPageController extends BaseController {
 
     private _studentEnabledPage: StudentEnabledPage;
     public get studentEnabledPage(): StudentEnabledPage {
@@ -12,9 +12,11 @@ class StudentEnabledPageController {
     private infoList: StudentItemData[] = [];
 
     constructor() {
+        super();
     }
 
     init() {
+        this.studentEnabledPage.exml_titleBar.exml_set.visible = false;
         this.studentEnabledPage.exml_scroller.horizontalScrollBar.autoVisibility = false;
         this.studentEnabledPage.exml_scroller.horizontalScrollBar.visible = false;
         this.studentEnabledPage.exml_scroller.verticalScrollBar.autoVisibility = false;
@@ -30,11 +32,17 @@ class StudentEnabledPageController {
 
     requestData() {
         // HttpManager.instance.sendMessage(null, (res) => {
+        this.infoList.splice(0, this.infoList.length);
         for (let item of studentTempList) {
             this.infoList.push(new StudentItemData(item));
         }
-        this.arrayCollection.replaceAll(this.infoList);
+        this.beforUpdateView();
         // }, this);
+    }
+
+    beforUpdateView() {
+        this.arrayCollection.replaceAll(this.infoList);
+        this.updateView(this.studentEnabledPage.exml_titleBar);
     }
 }
 

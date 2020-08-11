@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="UserPaySkin"
+	 width="720"
+	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<e:Rect id="exml_bg" left="0" right="0" fillColor="0xF3F3F3" visible="true" top="0" bottom="0"/>
+	<ns1:TitleBar id="exml_titleBar" skinName="TitleBarSkin" left="0" right="0" top="0"/>
+</e:Skin>
