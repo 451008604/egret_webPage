@@ -58,7 +58,7 @@ class UserPage extends BaseScene {
     init() {
         this.controller = new UserPageController();
         let controller = (this.controller as UserPageController);
-        controller.userPage = this;
+        controller.displayView = this;
     }
 
     senMsg() {

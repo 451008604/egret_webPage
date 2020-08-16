@@ -18,6 +18,7 @@
 	"exmls": [
 		"resource/eui_skins/Button1Skin.exml",
 		"resource/eui_skins/Button2Skin.exml",
+		"resource/eui_skins/Button3Skin.exml",
 		"resource/eui_skins/ButtonSkin.exml",
 		"resource/eui_skins/CheckBoxSkin.exml",
 		"resource/eui_skins/HScrollBarSkin.exml",
@@ -28,17 +29,21 @@
 		"resource/eui_skins/RadioButtonSkin.exml",
 		"resource/eui_skins/ScrollerSkin.exml",
 		"resource/eui_skins/TextInput1Skin.exml",
+		"resource/eui_skins/TextInput2Skin.exml",
 		"resource/eui_skins/TextInputSkin.exml",
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
+		"resource/skin/HomePageSkin.exml",
 		"resource/skin/OrderFromItemSkin.exml",
 		"resource/skin/TitleBarSkin.exml",
 		"resource/skin/OrderFromPageSkin.exml",
+		"resource/skin/PayingItemSkin.exml",
+		"resource/skin/PayingPageSkin.exml",
 		"resource/skin/StudentEnabledPageSkin.exml",
 		"resource/skin/StudentItemSkin.exml",
 		"resource/skin/UserPageSkin.exml",
-		"resource/skin/UserPaySkin.exml"
+		"resource/skin/UserPayPageSkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }

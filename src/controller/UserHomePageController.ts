@@ -1,23 +1,15 @@
 class UserHomePageController extends BaseController {
 
-    private _userHomePage: UserHomePage;
-    public get userHomePage(): UserHomePage {
-        return this._userHomePage;
-    }
-    public set userHomePage(v: UserHomePage) {
-        this._userHomePage = v;
-        this.init();
-    }
-
     constructor() {
         super();
     }
 
     init() {
-        this.userHomePage.exml_infoGroup.removeChild(this.userHomePage.exml_item3);
-        this.userHomePage.exml_infoGroup.removeChild(this.userHomePage.exml_item4);
-        this.userHomePage.exml_bg.height = GlobalCfg.instance.stageHeight;
-        this.userHomePage.exml_touXiang.mask = this.userHomePage.exml_iconMask;
+        let displayView = (this.displayView as UserHomePage);
+        displayView.exml_infoGroup.removeChild(displayView.exml_item3);
+        displayView.exml_infoGroup.removeChild(displayView.exml_item4);
+        displayView.exml_bg.height = GlobalCfg.instance.stageHeight;
+        displayView.exml_touXiang.mask = displayView.exml_iconMask;
 
         this.requestData();
     }
@@ -45,6 +37,6 @@ class UserHomePageController extends BaseController {
         this.dataModel.exml_kaiHaoMingE = this.dataModel.exml_kaiHaoMingE + "人";
         this.dataModel.exml_zhangHuYuE = "账户余额：￥" + this.dataModel.exml_zhangHuYuE;
 
-        this.updateView(this.userHomePage);
+        this.updateView(this.displayView);
     }
 }

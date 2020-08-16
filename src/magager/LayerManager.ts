@@ -24,7 +24,7 @@ class LayerManager {
     }
 
     init(): egret.DisplayObjectContainer {
-        this.showPage(PagesIndex.USER);
+        this.showPage(PagesIndex.HOME);
 
         return this.sceneLayer;
     }
@@ -33,7 +33,7 @@ class LayerManager {
         this.sceneLayer.removeChildren();
         switch (index) {
             case PagesIndex.HOME:
-
+                new HomePage().show();
                 break;
             case PagesIndex.USER:
                 new UserPage().show();
@@ -46,6 +46,12 @@ class LayerManager {
                 break;
             case PagesIndex.ORDERFROM:
                 new OrderFromPage().show();
+                break;
+            case PagesIndex.USERPAY:
+                new UserPayPage().show();
+                break;
+            case PagesIndex.PAYING:
+                new PayingPage().show();
                 break;
         }
     }

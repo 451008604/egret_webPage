@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="UserPayPageSkin"
+	 width="720"
+	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="exml_bg" left="0" right="0" fillColor="0xF3F3F3" visible="true" top="0" bottom="0" locked="true"/>
+	<ns1:TitleBar id="exml_titleBar" skinName="TitleBarSkin" left="0" right="0" top="0" locked="true"/>
+	<e:Group y="94.367" anchorOffsetY="0" height="286.805" visible="true" left="0" right="0">
+		<e:Group visible="true" anchorOffsetY="0" left="0" right="0" top="0" height="97">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF" width="720"/>
+			<e:Group visible="true" verticalCenter="0" left="22">
+				
+						
+						
+					
+				<e:Image source="transaction_fill_png" x="0" verticalCenter="0"/>
+				<e:Label text="交费金额 = 提现金额的50%" x="52" anchorOffsetX="0" textColor="0xFD7302" fontFamily="SimHei" verticalCenter="0"/>
+			</e:Group>
+			<e:Rect width="700" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xCDCDCD" scaleX="1" scaleY="1" visible="true" right="0" bottom="1" height="2"/>
+		</e:Group>
+		<e:Group visible="true" left="0" right="0" top="98" anchorOffsetY="0" height="190">
+			<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF" width="720"/>
+			<e:Group horizontalCenter="0" verticalCenter="0">
+				<e:Label text="￥" fontFamily="Microsoft YaHei" textColor="0x000000" size="50" visible="true" verticalAlign="bottom" anchorOffsetY="0" height="40"/>
+				<e:TextInput id="exml_inputText" skinName="skins.TextInput2Skin"/>
+				<e:layout>
+					<e:HorizontalLayout gap="0" verticalAlign="middle" horizontalAlign="center"/>
+				</e:layout>
+			</e:Group>
+			<e:Rect width="700" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xCDCDCD" scaleX="1" scaleY="1" visible="true" bottom="1" right="0" height="2"/>
+		</e:Group>
+		<e:layout>
+			<e:VerticalLayout gap="0" horizontalAlign="center" verticalAlign="top"/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="exml_submitBtn" label="立即支付" y="400" skinName="skins.Button3Skin" anchorOffsetX="0" width="680" anchorOffsetY="0" height="75" visible="true" horizontalCenter="0"/>
+</e:Skin>

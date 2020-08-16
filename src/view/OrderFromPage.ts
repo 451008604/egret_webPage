@@ -1,6 +1,6 @@
 class OrderFromPage extends BaseScene {
     public exml_bg: eui.Rect;
-    public exml_titleBar:TitleBar;
+    public exml_titleBar: TitleBar;
     public exml_scroller: eui.Scroller;
     public exml_scrollerList: eui.List;
 
@@ -13,11 +13,10 @@ class OrderFromPage extends BaseScene {
     show() {
         super.show();
 
-        this.orderFromPageController.orderFromPage = this;
+        this.orderFromPageController.displayView = this;
     }
 
-    senMsg() {
-
+    senMsg(): void {
+        throw new Error("Method not implemented.");
     }
-
 }

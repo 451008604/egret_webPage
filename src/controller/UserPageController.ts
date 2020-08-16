@@ -1,21 +1,13 @@
 class UserPageController extends BaseController {
 
-    private _userPage: UserPage;
-    public get userPage(): UserPage {
-        return this._userPage;
-    }
-    public set userPage(v: UserPage) {
-        this._userPage = v;
-        this.init();
-    }
-
     constructor() {
         super();
     }
 
     init() {
-        this.userPage.exml_bg.height = GlobalCfg.instance.stageHeight;
-        this.userPage.exml_touXiang.mask = this.userPage.exml_iconMask;
+        let displayView = (this.displayView as UserPage);
+        displayView.exml_bg.height = GlobalCfg.instance.stageHeight;
+        displayView.exml_touXiang.mask = displayView.exml_iconMask;
 
         this.requestData();
     }
@@ -47,6 +39,6 @@ class UserPageController extends BaseController {
         this.dataModel.exml_kaiHaoMingE = this.dataModel.exml_kaiHaoMingE + "人";
         this.dataModel.exml_zhangHuYuE = "账户余额：￥" + this.dataModel.exml_zhangHuYuE;
 
-        this.updateView(this.userPage);
+        this.updateView(this.displayView);
     }
 }

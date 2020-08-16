@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="HomePageSkin"
+	 width="720"
+	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xCECECE" locked="true"/>
+	<e:Group x="123" y="122">
+		<e:Button id="exml_btn1" label="组长个人信息页" x="0" y="0"/>
+		<e:Button id="exml_btn2" label="个人信息页" x="10" y="10"/>
+		<e:Button id="exml_btn3" label="学员 - 已开通页" x="20" y="20"/>
+		<e:Button id="exml_btn4" label="订单页" x="30" y="30"/>
+		<e:Button id="exml_btn5" label="用户交费页" x="40" y="40"/>
+		<e:Button id="exml_btn6" label="全部交费页" x="50" y="50"/>
+		<e:layout>
+			<e:VerticalLayout gap="10"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

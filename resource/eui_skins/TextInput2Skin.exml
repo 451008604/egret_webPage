@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.TextInput2Skin" minHeight="40" minWidth="300" xmlns:e="http://ns.egret.com/eui" height="40">
+	<e:Rect height="100%" width="100%" visible="true" fillColor="0xFFFFFF"/>
+ 	<e:EditableText id="textDisplay"                  textColor="0x000000" size="30"  fontFamily="SimHei" height="40" verticalAlign="middle" left="10" right="10" verticalCenter="0"/>
+</e:Skin>

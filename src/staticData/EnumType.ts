@@ -4,5 +4,7 @@ enum PagesIndex {
     USERHOME,
     SET,
     STUDENT_ENABLED,
-    ORDERFROM
+    ORDERFROM,
+    USERPAY,
+    PAYING
 }

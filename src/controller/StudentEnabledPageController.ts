@@ -1,13 +1,5 @@
 class StudentEnabledPageController extends BaseController {
 
-    private _studentEnabledPage: StudentEnabledPage;
-    public get studentEnabledPage(): StudentEnabledPage {
-        return this._studentEnabledPage;
-    }
-    public set studentEnabledPage(v: StudentEnabledPage) {
-        this._studentEnabledPage = v;
-        this.init();
-    }
     public arrayCollection: eui.ArrayCollection;
     private infoList: StudentItemData[] = [];
 
@@ -16,16 +8,17 @@ class StudentEnabledPageController extends BaseController {
     }
 
     init() {
-        this.studentEnabledPage.exml_titleBar.exml_set.visible = false;
-        this.studentEnabledPage.exml_scroller.horizontalScrollBar.autoVisibility = false;
-        this.studentEnabledPage.exml_scroller.horizontalScrollBar.visible = false;
-        this.studentEnabledPage.exml_scroller.verticalScrollBar.autoVisibility = false;
-        this.studentEnabledPage.exml_scroller.verticalScrollBar.visible = false;
+        let displayView = (this.displayView as StudentEnabledPage);
+        displayView.exml_titleBar.exml_set.visible = false;
+        displayView.exml_scroller.horizontalScrollBar.autoVisibility = false;
+        displayView.exml_scroller.horizontalScrollBar.visible = false;
+        displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
+        displayView.exml_scroller.verticalScrollBar.visible = false;
 
         this.arrayCollection = new eui.ArrayCollection(this.infoList);
-        this.studentEnabledPage.exml_scrollerList.useVirtualLayout = true;
-        this.studentEnabledPage.exml_scrollerList.itemRenderer = StudentItem;
-        this.studentEnabledPage.exml_scrollerList.dataProvider = this.arrayCollection;
+        displayView.exml_scrollerList.useVirtualLayout = true;
+        displayView.exml_scrollerList.itemRenderer = StudentItem;
+        displayView.exml_scrollerList.dataProvider = this.arrayCollection;
 
         this.requestData();
     }
@@ -42,7 +35,7 @@ class StudentEnabledPageController extends BaseController {
 
     beforUpdateView() {
         this.arrayCollection.replaceAll(this.infoList);
-        this.updateView(this.studentEnabledPage.exml_titleBar);
+        this.updateView(this.displayView.exml_titleBar);
     }
 }
 
