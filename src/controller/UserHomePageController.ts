@@ -15,20 +15,11 @@ class UserHomePageController extends BaseController {
     }
 
     requestData() {
-        // HttpManager.instance.sendMessage(null, () => {
-        new UserPageData({
-            exml_bianHao: "10002",
-            exml_touXiang: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-            exml_yongHuMingCheng: "小明",
-            exml_wenXinTiShi: "1、本平台永久免费开号、预先跑量。\n2、系统定期自动禁用疑似逃费账号。\n3、客服QQ：*********",
-            exml_kaiHaoMingE: "99999",
-            exml_daiShenHe: 123,
-            exml_yiKaiTong: 456,
-            exml_yiJinYong: 789
-        });
-        this.dataModel = GlobalCfg.instance.UserInfo;
-        this.beforUpdateView();
-        // }, this);
+        HttpManager.instance.sendMessage("releaseAdressAction!getALLAmount.action", { userId: GlobalCfg.instance.UserInfo.userId }, (res) => {
+            new UserPageData(res);
+            this.dataModel = GlobalCfg.instance.UserInfo;
+            this.beforUpdateView();
+        }, this);
     }
 
     beforUpdateView() {

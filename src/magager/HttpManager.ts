@@ -14,15 +14,17 @@ class HttpManager {
 
     /**
      * 发送http请求
+     * @param portName 接口名称
      * @param data 请求数据
      * @param callback 请求回调
      * @param thisObj 作用域
      * @param method 强求类型 默认GET
      */
-    sendMessage(data: object, callback: Function, thisObj: Object, method: string = egret.HttpMethod.GET): void {
+    sendMessage(portName: string, data: object, callback: Function, thisObj: Object, method: string = egret.HttpMethod.GET): void {
         let dataStr: string = JSON.stringify(data);
+        Config.url += "" + portName;
         if (method == egret.HttpMethod.GET) {
-            Config.url += "?jsonBody=" + dataStr;
+            Config.url += "" + dataStr;
         }
 
         let request: egret.HttpRequest = new egret.HttpRequest();

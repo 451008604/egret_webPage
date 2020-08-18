@@ -24,13 +24,13 @@ class StudentEnabledPageController extends BaseController {
     }
 
     requestData() {
-        // HttpManager.instance.sendMessage(null, (res) => {
-        this.infoList.splice(0, this.infoList.length);
-        for (let item of studentTempList) {
-            this.infoList.push(new StudentItemData(item));
-        }
-        this.beforUpdateView();
-        // }, this);
+        HttpManager.instance.sendMessage("releaseAdressAction!getAllHistoryAdress.action", { userId: GlobalCfg.instance.UserInfo.userId, page: 0 }, (res) => {
+            this.infoList.splice(0, this.infoList.length);
+            for (let item of studentTempList) {
+                this.infoList.push(new StudentItemData(item));
+            }
+            this.beforUpdateView();
+        }, this);
     }
 
     beforUpdateView() {
@@ -46,135 +46,14 @@ class StudentEnabledPageController extends BaseController {
 
 // 模拟数据
 let studentTempList = [{
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "正常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
-}, {
-    exml_xueYuanBianHao: "1549",
-    exml_tip: "异常",
-    exml_icon: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-    exml_yongHuMing: "小花",
-    exml_zongPaoLiang: "3125/3437",
-    exml_zongJiaoFei: "99.99",
-    exml_zuiHouXiaDan: "2020-7-15",
-    exml_zuiHouJiaoFei: "2020-8-1",
-    exml_beiZhu: "这是个啥",
-    exml_jiaRuRiQi: "2001-1-1"
+    test1: "1549",
+    test2: "正常",
+    test3: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
+    test4: "小花",
+    test5: "3125/3437",
+    test6: "99.99",
+    test7: "2020-7-15",
+    test8: "2020-8-1",
+    test9: "这是个啥",
+    test10: "2001-1-1"
 }]

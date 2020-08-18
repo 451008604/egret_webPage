@@ -2,5 +2,5 @@ let Config = {
     /**
      * 请求地址
      */
-    url: ""
+    url: "http://www.hshaichuan.com/click/"
 }

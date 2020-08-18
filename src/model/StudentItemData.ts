@@ -15,16 +15,16 @@ class StudentItemData {
     public exml_jiaRuRiQi: string = "";
 
     propertyMap = {
-        exml_xueYuanBianHao: "exml_xueYuanBianHao",
-        exml_tip: "exml_tip",
-        exml_icon: "exml_icon",
-        exml_yongHuMing: "exml_yongHuMing",
-        exml_zongPaoLiang: "exml_zongPaoLiang",
-        exml_zongJiaoFei: "exml_zongJiaoFei",
-        exml_zuiHouXiaDan: "exml_zuiHouXiaDan",
-        exml_zuiHouJiaoFei: "exml_zuiHouJiaoFei",
-        exml_beiZhu: "exml_beiZhu",
-        exml_jiaRuRiQi: "exml_jiaRuRiQi"
+        exml_xueYuanBianHao: "test1",
+        exml_tip: "test2",
+        exml_icon: "test3",
+        exml_yongHuMing: "test4",
+        exml_zongPaoLiang: "test5",
+        exml_zongJiaoFei: "test6",
+        exml_zuiHouXiaDan: "test7",
+        exml_zuiHouJiaoFei: "test8",
+        exml_beiZhu: "test9",
+        exml_jiaRuRiQi: "test10"
     }
 
     constructor(value) {
