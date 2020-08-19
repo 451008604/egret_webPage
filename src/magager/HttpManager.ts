@@ -21,9 +21,16 @@ class HttpManager {
      * @param method 强求类型 默认GET
      */
     sendMessage(portName: string, data: object, callback: Function, thisObj: Object, method: string = egret.HttpMethod.GET): void {
-        let dataStr: string = JSON.stringify(data);
+        // let dataStr: string = JSON.stringify(data);
+        let dataStr: string = null;
         Config.url += "" + portName;
         if (method == egret.HttpMethod.GET) {
+            dataStr = JSON.stringify(data);
+            let str = "?";
+            for (let i in data) {
+                str += (i + "=" + data[i] + "&");
+            }
+            str.slice(0, str.length - 1);
             Config.url += "" + dataStr;
         }
 

@@ -27,7 +27,7 @@ class UserPageController extends BaseController {
                 exml_paoliangText1: 234,
                 exml_paoliangText2: 234,
                 exml_paoliangText3: 234
-            })
+            });
             this.dataModel = GlobalCfg.instance.UserInfo;
             this.beforUpdateView();
         }, this, egret.HttpMethod.POST);

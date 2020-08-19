@@ -3,7 +3,7 @@
  */
 class UserPageData {
 
-    public userId: number = 0;
+    public userId: number = 1;
     public exml_bianHao: string = "";
     public exml_touXiang: string = "";
     public exml_yongHuMingCheng: string = "";
