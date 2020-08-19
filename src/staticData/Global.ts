@@ -11,7 +11,7 @@ class Global {
         USER_HOME_PAGE: "releaseAdressAction!getALLAmount.action",
         /**用户支付页 */
         USER_PAY_PAGE: "wechatAction!pay.action",
-        /**学员 - 也开通页 */
+        /**学员 - 已开通页 */
         STUDENT_ENABLED_PAGE: "releaseAdressAction!getAllHistoryAdress.action",
         /**全部交费页 */
         PAYING_PAGE: "historyHistoryAction!getAllhistory.action",
