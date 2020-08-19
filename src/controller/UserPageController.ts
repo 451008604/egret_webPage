@@ -6,14 +6,14 @@ class UserPageController extends BaseController {
 
     init() {
         let displayView = (this.displayView as UserPage);
-        displayView.exml_bg.height = GlobalCfg.instance.stageHeight;
+        displayView.exml_bg.height = Global.STAGE_HEIGHT;
         displayView.exml_touXiang.mask = displayView.exml_iconMask;
 
         this.requestData();
     }
 
     requestData() {
-        HttpManager.instance.sendMessage("wechatAction!insertUser.action", { code: GlobalCfg.instance.getUrlParam['code'], invitationId: GlobalCfg.instance.getUrlParam['invitationId'] }, (res) => {
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAGE, { code: Global.GET_URL_PARAM['code'], invitationId: Global.GET_URL_PARAM['invitationId'] }, (res) => {
             new UserPageData({
                 exml_bianHao: "10002",
                 exml_touXiang: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
@@ -28,7 +28,7 @@ class UserPageController extends BaseController {
                 exml_paoliangText2: 234,
                 exml_paoliangText3: 234
             });
-            this.dataModel = GlobalCfg.instance.UserInfo;
+            this.dataModel = Global.USER_INFO;
             this.beforUpdateView();
         }, this, egret.HttpMethod.POST);
     }

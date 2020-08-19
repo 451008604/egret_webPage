@@ -8,16 +8,16 @@ class UserHomePageController extends BaseController {
         let displayView = (this.displayView as UserHomePage);
         displayView.exml_infoGroup.removeChild(displayView.exml_item3);
         displayView.exml_infoGroup.removeChild(displayView.exml_item4);
-        displayView.exml_bg.height = GlobalCfg.instance.stageHeight;
+        displayView.exml_bg.height = Global.STAGE_HEIGHT;
         displayView.exml_touXiang.mask = displayView.exml_iconMask;
 
         this.requestData();
     }
 
     requestData() {
-        HttpManager.instance.sendMessage("releaseAdressAction!getALLAmount.action", { userId: GlobalCfg.instance.UserInfo.userId }, (res) => {
+        HttpManager.instance.sendMessage("releaseAdressAction!getALLAmount.action", { userId: Global.USER_INFO.userId }, (res) => {
             new UserPageData(res);
-            this.dataModel = GlobalCfg.instance.UserInfo;
+            this.dataModel = Global.USER_INFO;
             this.beforUpdateView();
         }, this);
     }

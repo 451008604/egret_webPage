@@ -21,26 +21,28 @@ class HttpManager {
      * @param method 强求类型 默认GET
      */
     sendMessage(portName: string, data: object, callback: Function, thisObj: Object, method: string = egret.HttpMethod.GET): void {
-        // let dataStr: string = JSON.stringify(data);
-        let dataStr: string = null;
-        Config.url += "" + portName;
+        let param: string = null;
+        let requestUrl = Global.URL;
+        requestUrl += "" + portName;
         if (method == egret.HttpMethod.GET) {
-            dataStr = JSON.stringify(data);
             let str = "?";
             for (let i in data) {
                 str += (i + "=" + data[i] + "&");
             }
-            str.slice(0, str.length - 1);
-            Config.url += "" + dataStr;
+            requestUrl += "" + str.slice(0, str.length - 1);
+        } else if (method == egret.HttpMethod.POST) {
+            param = JSON.stringify(data);
+        } else {
+            return;
         }
 
         let request: egret.HttpRequest = new egret.HttpRequest();
         request.responseType = egret.HttpResponseType.TEXT;
-        request.open(Config.url, method);
+        request.open(requestUrl, method);
         request.addEventListener(egret.Event.COMPLETE, this.completeHandler, this);
         request.addEventListener(egret.ProgressEvent.PROGRESS, this.progressHandler, this);
         request.addEventListener(egret.IOErrorEvent.IO_ERROR, this.errorHandler, this);
-        request.send(dataStr);
+        request.send(param);
 
         this.callBackDic.set(request.hashCode, { func: callback, obj: thisObj });
     }

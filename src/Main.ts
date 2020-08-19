@@ -31,8 +31,8 @@ class Main extends eui.UILayer {
         await this.loadResource()
 
         egret.ImageLoader.crossOrigin = "anonymous";
-        GlobalCfg.instance.stageHeight = this.stage.stageHeight;
-        GlobalCfg.instance.stageWidth = this.stage.stageWidth;
+        Global.STAGE_HEIGHT = this.stage.stageHeight;
+        Global.STAGE_WIDTH = this.stage.stageWidth;
         this.addChild(LayerManager.instance.init());
     }
 

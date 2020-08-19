@@ -32,7 +32,7 @@ class StudentEnabledPageController extends BaseController {
     }
 
     requestData() {
-        HttpManager.instance.sendMessage("releaseAdressAction!getAllHistoryAdress.action", { userId: GlobalCfg.instance.UserInfo.userId, page: this.pageIndex }, (res) => {
+        HttpManager.instance.sendMessage("releaseAdressAction!getAllHistoryAdress.action", { userId: Global.USER_INFO.userId, page: this.pageIndex }, (res) => {
             this.infoList.splice(0, this.infoList.length);
             for (let item of studentTempList) {
                 this.infoList.push(new StudentItemData(item));

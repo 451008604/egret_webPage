@@ -41,6 +41,6 @@ class UserPageData {
             }
         }
 
-        GlobalCfg.instance.UserInfo = this;
+        Global.USER_INFO = this;
     }
 }
