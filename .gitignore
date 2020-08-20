@@ -1,4 +1,4 @@
-bin-debug
-dist
 .vscode
-bin-release/.
+bin-debug
+bin-release
+libs
