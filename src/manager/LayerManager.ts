@@ -30,7 +30,7 @@ class LayerManager {
         return this.sceneLayer;
     }
 
-    showPage(index) {
+    showPage(index, data = null) {
         this.sceneLayer.removeChildren();
         switch (index) {
             case PagesIndex.HOME:
@@ -40,10 +40,14 @@ class LayerManager {
                 new UserPage().show();
                 break;
             case PagesIndex.STUDENT_ENABLED:
-                new StudentEnabledPage().show();
+                let studentEnabledPage: StudentEnabledPage = new StudentEnabledPage();
+                studentEnabledPage.show();
+                studentEnabledPage.studentEnabledPageController.type = data;
                 break;
             case PagesIndex.ORDERFROM:
-                new OrderFromPage().show();
+                let orderFromPage: OrderFromPage = new OrderFromPage();
+                orderFromPage.show();
+                orderFromPage.orderFromPageController.type = data;
                 break;
             case PagesIndex.USERPAY:
                 new UserPayPage().show();

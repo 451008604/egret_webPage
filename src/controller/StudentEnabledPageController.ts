@@ -4,6 +4,7 @@ class StudentEnabledPageController extends BaseController {
     private infoList: StudentItemData[] = [];
 
     private pageIndex: number = 0;
+    public type: number = 0;
 
     constructor() {
         super();
@@ -32,8 +33,8 @@ class StudentEnabledPageController extends BaseController {
     }
 
     requestData() {
-        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.STUDENT_ENABLED_PAGE, { userId: Global.USER_INFO.exml_bianHao, page: this.pageIndex }, (res) => {
-            this.infoList.splice(0, this.infoList.length);
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.STUDENT_ENABLED_PAGE, { userId: Global.USER_INFO.userId, page: this.pageIndex, type: this.type }, (res) => {
+            // this.infoList.splice(0, this.infoList.length);
             for (let item of studentTempList) {
                 this.infoList.push(new StudentItemData(item));
             }
@@ -43,7 +44,6 @@ class StudentEnabledPageController extends BaseController {
 
     beforUpdateView() {
         this.arrayCollection.replaceAll(this.infoList);
-        this.updateView(this.displayView.exml_titleBar);
     }
 }
 

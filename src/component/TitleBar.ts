@@ -22,6 +22,6 @@ class TitleBar extends eui.Component {
 
     setTouchHandler(e: egret.TouchEvent) {
         console.log("设置");
-        LayerManager.instance.showPage(PagesIndex.SET);
+        // LayerManager.instance.showPage(PagesIndex.SET);
     }
 }

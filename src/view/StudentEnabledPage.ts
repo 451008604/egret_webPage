@@ -7,7 +7,7 @@ class StudentEnabledPage extends BaseScene {
     public exml_scroller: eui.Scroller;
     public exml_scrollerList: eui.List;
 
-    private studentEnabledPageController: StudentEnabledPageController = new StudentEnabledPageController();
+    public studentEnabledPageController: StudentEnabledPageController = new StudentEnabledPageController();
     constructor() {
         super();
         this.skinName = "StudentEnabledPageSkin";

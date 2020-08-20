@@ -15,7 +15,6 @@ class HomePage extends BaseScene {
         super.show();
 
         this.exml_btn1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.exml_btn1TouchHandler, this);
-        this.exml_btn2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.exml_btn2TouchHandler, this);
         this.exml_btn3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.exml_btn3TouchHandler, this);
         this.exml_btn4.addEventListener(egret.TouchEvent.TOUCH_TAP, this.exml_btn4TouchHandler, this);
         this.exml_btn5.addEventListener(egret.TouchEvent.TOUCH_TAP, this.exml_btn5TouchHandler, this);

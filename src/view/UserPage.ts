@@ -25,7 +25,9 @@ class UserPage extends BaseScene {
     public exml_tiXianJiLu: eui.Group;
     public exml_tiChengJiLu: eui.Group;
     public exml_item5: eui.Group;
-    public exml_paoLiangJiLu: eui.Group;
+    public exml_paoLiangJiLu1: eui.Group;
+    public exml_paoLiangJiLu2: eui.Group;
+    public exml_paoLiangJiLu3: eui.Group;
     public exml_paoliangText1: eui.Label;
     public exml_paoliangText2: eui.Label;
     public exml_paoliangText3: eui.Label;
@@ -47,7 +49,9 @@ class UserPage extends BaseScene {
         this.exml_shenQingTiXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.shenQingTiXianTouchHandler, this);
         this.exml_tiXianJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiXianJiLuTouchHandler, this);
         this.exml_tiChengJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiChengJiLuTouchHandler, this);
-        this.exml_paoLiangJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLuTouchHandler, this);
+        this.exml_paoLiangJiLu1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu1TouchHandler, this);
+        this.exml_paoLiangJiLu2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu2TouchHandler, this);
+        this.exml_paoLiangJiLu3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu3TouchHandler, this);
         this.exml_checkPending.addEventListener(egret.TouchEvent.TOUCH_TAP, this.checkPendingTouchHandler, this);
         this.exml_enabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.enabledTouchHandler, this);
         this.exml_disabled.addEventListener(egret.TouchEvent.TOUCH_TAP, this.disabledTouchHandler, this);
@@ -85,19 +89,19 @@ class UserPage extends BaseScene {
     /**待审核 */
     private checkPendingTouchHandler(e: egret.TouchEvent) {
         console.log("待审核");
-        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED, 1);
     }
 
     /**已开通 */
     private enabledTouchHandler(e: egret.TouchEvent) {
         console.log("已开通");
-        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED, 2);
     }
 
     /**已禁用 */
     private disabledTouchHandler(e: egret.TouchEvent) {
         console.log("已禁用");
-        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED, 3);
     }
 
     /**申请提现 */
@@ -115,9 +119,21 @@ class UserPage extends BaseScene {
         console.log("提成记录");
     }
 
-    /**跑量记录 */
-    private paoLiangJiLuTouchHandler(e: egret.TouchEvent) {
-        console.log("跑量记录");
-        LayerManager.instance.showPage(PagesIndex.ORDERFROM);
+    /**今日跑量 */
+    private paoLiangJiLu1TouchHandler(e: egret.TouchEvent) {
+        console.log("今日跑量");
+        LayerManager.instance.showPage(PagesIndex.ORDERFROM, 1);
+    }
+
+    /**昨日跑量 */
+    private paoLiangJiLu2TouchHandler(e: egret.TouchEvent) {
+        console.log("昨日跑量");
+        LayerManager.instance.showPage(PagesIndex.ORDERFROM, 2);
+    }
+
+    /**剩余需求 */
+    private paoLiangJiLu3TouchHandler(e: egret.TouchEvent) {
+        console.log("剩余需求");
+        LayerManager.instance.showPage(PagesIndex.ORDERFROM, 3);
     }
 }

@@ -27,15 +27,13 @@ class UserPageController extends BaseController {
 
     beforUpdateView() {
         // 特殊处理部分lab
-        this.dataModel.exml_kaiHaoMingE = this.dataModel.exml_kaiHaoMingE + "人";
-        this.dataModel.exml_zhangHuYuE = "账户余额：￥" + this.dataModel.exml_zhangHuYuE;
+        this.dataModel.exml_kaiHaoMingE = "" + this.dataModel.exml_kaiHaoMingE;
+        this.dataModel.exml_zhangHuYuE = "" + this.dataModel.exml_zhangHuYuE;
+        this.dataModel.exml_bianHao = "" + this.dataModel.exml_bianHao;
 
         if (this.dataModel.userLeavel == 1) {
-            this.dataModel.exml_bianHao = "员工编号：" + this.dataModel.exml_bianHao;
             this.displayView.exml_infoGroup.removeChild(this.displayView.exml_item3);
             this.displayView.exml_infoGroup.removeChild(this.displayView.exml_item4);
-        } else if (this.dataModel.userLeavel == 2) {
-            this.dataModel.exml_bianHao = "组长编号：" + this.dataModel.exml_bianHao;
         }
 
         this.updateView(this.displayView);

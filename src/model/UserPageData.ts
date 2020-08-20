@@ -4,6 +4,7 @@
 class UserPageData {
 
     public userOpenid: number = 0;
+    public userId: number = 0;
     public userLeavel: number = 0;
     public exml_bianHao: string = "";
     public exml_touXiang: string = "";
@@ -46,6 +47,14 @@ class UserPageData {
             }
         }
 
+        this.exml_kaiHaoMingE = this.exml_kaiHaoMingE + "人";
+        this.exml_zhangHuYuE = "账户余额：￥" + this.exml_zhangHuYuE;
+        this.userId = Number(this.exml_bianHao);
+        if (this.userLeavel == 1) {
+            this.exml_bianHao = "员工编号：" + this.exml_bianHao;
+        } else if (this.userLeavel == 2) {
+            this.exml_bianHao = "组长编号：" + this.exml_bianHao;
+        }
         this.exml_kaiHaoMingE = "" + (Number(this.exml_daiShenHe) + Number(this.exml_yiKaiTong) + Number(this.exml_yiJinYong));
 
         Global.USER_INFO = this;

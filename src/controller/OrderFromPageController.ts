@@ -4,6 +4,7 @@ class OrderFromPageController extends BaseController {
     private infoList: OrderFromItemData[] = [];
 
     private pageIndex: number = 0;
+    public type: number = 0;
 
     constructor() {
         super();
@@ -32,12 +33,12 @@ class OrderFromPageController extends BaseController {
     }
 
     requestData() {
-        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_FROM_PAGE, { userId: Global.USER_INFO.exml_bianHao, page: this.pageIndex }, (res) => {
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_FROM_PAGE, { userId: Global.USER_INFO.userId, page: this.pageIndex, type: this.type }, (res) => {
             for (let item of res.data.listAdress) {
                 this.infoList.push(new OrderFromItemData(item));
             }
             this.beforUpdateView();
-        }, this,egret.HttpMethod.POST);
+        }, this, egret.HttpMethod.POST);
     }
 
     beforUpdateView() {

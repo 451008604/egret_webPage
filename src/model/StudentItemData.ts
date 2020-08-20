@@ -15,14 +15,14 @@ class StudentItemData {
     public exml_jiaRuRiQi: string = "";
 
     propertyMap = {
-        exml_xueYuanBianHao: "test1",
-        exml_tip: "test2",
-        exml_icon: "test3",
-        exml_yongHuMing: "test4",
+        exml_xueYuanBianHao: "userId",
+        exml_tip: "userLabel",
+        exml_icon: "headUrl",
+        exml_yongHuMing: "userName",
         exml_zongPaoLiang: "test5",
-        exml_zongJiaoFei: "test6",
-        exml_zuiHouXiaDan: "test7",
-        exml_zuiHouJiaoFei: "test8",
+        exml_zongJiaoFei: "money",
+        exml_zuiHouXiaDan: "endAdressTime",
+        exml_zuiHouJiaoFei: "endMoneyTime",
         exml_beiZhu: "test9",
         exml_jiaRuRiQi: "test10"
     }
@@ -32,6 +32,14 @@ class StudentItemData {
             if (value.hasOwnProperty(this.propertyMap[i])) {
                 this[i] = value[this.propertyMap[i]];
             }
+        }
+
+        if (Number(this.exml_tip) == 1) {
+            this.exml_tip = "未审核";
+        } else if (Number(this.exml_tip) == 2) {
+            this.exml_tip = "正常";
+        } else if (Number(this.exml_tip) == 3) {
+            this.exml_tip = "禁用";
         }
     }
 }
