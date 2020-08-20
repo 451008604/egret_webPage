@@ -1,7 +1,7 @@
 class Global {
 
     /**请求地址 */
-    static URL: string = "http://www.hshaichuan.com/click/";
+    static URL: string = "https://www.hshaichuan.com/click/";
 
     /**接口类型 */
     static INTERFACE_TYPE = {
@@ -12,11 +12,11 @@ class Global {
         /**用户支付页 */
         USER_PAY_PAGE: "wechatAction!pay.action",
         /**学员 - 已开通页 */
-        STUDENT_ENABLED_PAGE: "releaseAdressAction!getAllHistoryAdress.action",
+        STUDENT_ENABLED_PAGE: "",
         /**全部交费页 */
         PAYING_PAGE: "historyHistoryAction!getAllhistory.action",
         /**订单页 */
-        ORDER_FROM_PAGE: "wechatAction!insertUser.action"
+        ORDER_FROM_PAGE: "releaseAdressAction!getAllHistoryAdress.action"
     }
 
     /**舞台高度 */
@@ -25,7 +25,7 @@ class Global {
     static STAGE_WIDTH: number = 0;
 
     /**用户信息 */
-    static USER_INFO: UserPageData;
+    static USER_INFO: UserPageData = null;
 
 
     /**获取地址栏参数 */

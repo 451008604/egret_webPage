@@ -13,21 +13,13 @@ class UserPageController extends BaseController {
     }
 
     requestData() {
+        if (Global.USER_INFO != null) {
+            this.dataModel = Global.USER_INFO;
+            this.beforUpdateView();
+            return;
+        }
         HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAGE, { code: Global.GET_URL_PARAM['code'], invitationId: Global.GET_URL_PARAM['invitationId'] }, (res) => {
-            new UserPageData({
-                exml_bianHao: "10002",
-                exml_touXiang: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3140403455,2984550794&fm=26&gp=0.jpg",
-                exml_yongHuMingCheng: "小明",
-                exml_wenXinTiShi: "1、本平台永久免费开号、预先跑量。\n2、系统定期自动禁用疑似逃费账号。\n3、客服QQ：*********",
-                exml_kaiHaoMingE: "99999",
-                exml_daiShenHe: 123,
-                exml_yiKaiTong: 456,
-                exml_yiJinYong: 789,
-                exml_zhangHuYuE: "88.88",
-                exml_paoliangText1: 234,
-                exml_paoliangText2: 234,
-                exml_paoliangText3: 234
-            });
+            new UserPageData(res.data);
             this.dataModel = Global.USER_INFO;
             this.beforUpdateView();
         }, this, egret.HttpMethod.POST);
@@ -35,9 +27,16 @@ class UserPageController extends BaseController {
 
     beforUpdateView() {
         // 特殊处理部分lab
-        this.dataModel.exml_bianHao = "组长编号：" + this.dataModel.exml_bianHao;
         this.dataModel.exml_kaiHaoMingE = this.dataModel.exml_kaiHaoMingE + "人";
         this.dataModel.exml_zhangHuYuE = "账户余额：￥" + this.dataModel.exml_zhangHuYuE;
+
+        if (this.dataModel.userLeavel == 1) {
+            this.dataModel.exml_bianHao = "员工编号：" + this.dataModel.exml_bianHao;
+            this.displayView.exml_infoGroup.removeChild(this.displayView.exml_item3);
+            this.displayView.exml_infoGroup.removeChild(this.displayView.exml_item4);
+        } else if (this.dataModel.userLeavel == 2) {
+            this.dataModel.exml_bianHao = "组长编号：" + this.dataModel.exml_bianHao;
+        }
 
         this.updateView(this.displayView);
     }

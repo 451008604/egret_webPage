@@ -18,7 +18,7 @@ class StudentEnabledPage extends BaseScene {
 
         this.studentEnabledPageController.displayView = this;
 
-        this.exml_titleBar.addEventListener(egret.TouchEvent.TOUCH_TAP, this.submitTouchHandler, this);
+        this.exml_submit.addEventListener(egret.TouchEvent.TOUCH_TAP, this.submitTouchHandler, this);
         this.exml_clean.addEventListener(egret.TouchEvent.TOUCH_TAP, this.cleanTouchHandler, this);
     }
 

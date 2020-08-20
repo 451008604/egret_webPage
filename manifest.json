@@ -10,8 +10,8 @@
 	"game": [
 		"bin-debug/base/BaseScene.js",
 		"bin-debug/controller/BaseController.js",
-		"bin-debug/view/UserPage.js",
 		"bin-debug/controller/UserPayPageController.js",
+		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/component/OrderFromItem.js",
@@ -22,11 +22,10 @@
 		"bin-debug/controller/OrderFromPageController.js",
 		"bin-debug/controller/PayingPageController.js",
 		"bin-debug/controller/StudentEnabledPageController.js",
-		"bin-debug/controller/UserHomePageController.js",
 		"bin-debug/controller/UserPageController.js",
 		"bin-debug/LoadingUI.js",
-		"bin-debug/magager/HttpManager.js",
-		"bin-debug/magager/LayerManager.js",
+		"bin-debug/manager/HttpManager.js",
+		"bin-debug/manager/LayerManager.js",
 		"bin-debug/model/OrderFromItemData.js",
 		"bin-debug/model/PayingItemData.js",
 		"bin-debug/model/StudentItemData.js",
@@ -37,8 +36,7 @@
 		"bin-debug/view/OrderFromPage.js",
 		"bin-debug/view/PayingPage.js",
 		"bin-debug/view/StudentEnabledPage.js",
-		"bin-debug/view/UserHomePage.js",
-		"bin-debug/Platform.js",
+		"bin-debug/view/UserPage.js",
 		"bin-debug/view/UserPayPage.js"
 	]
 }

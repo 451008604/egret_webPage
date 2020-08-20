@@ -3,6 +3,8 @@ class OrderFromPageController extends BaseController {
     public arrCollection: eui.ArrayCollection;
     private infoList: OrderFromItemData[] = [];
 
+    private pageIndex: number = 0;
+
     constructor() {
         super();
     }
@@ -19,80 +21,26 @@ class OrderFromPageController extends BaseController {
         displayView.exml_scrollerList.useVirtualLayout = true;
         displayView.exml_scrollerList.itemRenderer = OrderFromItem;
         displayView.exml_scrollerList.dataProvider = this.arrCollection;
+        displayView.exml_scroller.addEventListener(eui.UIEvent.CHANGE_END, (res) => {
+            if (displayView.exml_scroller.viewport.scrollV + displayView.exml_scroller.viewport.height >= displayView.exml_scroller.viewport.contentHeight) {
+                this.pageIndex++;
+                this.requestData();
+            }
+        }, this);
 
         this.requestData();
     }
 
     requestData() {
-        // HttpManager.instance.sendMessage(null, (res) => {
-        for (let item of orderTempList) {
-            this.infoList.push(new OrderFromItemData(item));
-        }
-        this.beforUpdateView();
-        // }, this);
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_FROM_PAGE, { userId: Global.USER_INFO.exml_bianHao, page: this.pageIndex }, (res) => {
+            for (let item of res.data.listAdress) {
+                this.infoList.push(new OrderFromItemData(item));
+            }
+            this.beforUpdateView();
+        }, this,egret.HttpMethod.POST);
     }
 
     beforUpdateView() {
         this.arrCollection.replaceAll(this.infoList);
     }
 }
-
-
-
-
-
-let orderTempList = [{
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}, {
-    exml_shiJian: "2020-08-01",
-    exml_tip: "已完成",
-    exml_biaoTi: "测试标题",
-    exml_beiZhu: `备注`,
-    exml_yueDuCiShu: "123/456"
-}]

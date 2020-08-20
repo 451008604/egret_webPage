@@ -22,7 +22,7 @@ class UserPayPage extends BaseScene {
     }
 
     private submitBtnTouchHandler() {
-        console.log("提交");
+        console.log("立即支付");
     }
 
     private inputTextFocusHandler(e: egret.FocusEvent) {

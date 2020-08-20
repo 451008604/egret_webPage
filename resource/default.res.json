@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,group_fill_png,addition_fill_png,addition_fill1_png,enter_png,homepage_png,people_fill_png,search_png,setup_png,stealth_fill_png,success_fill_png,time_fill_png,transaction_fill_png",
 			"name": "preload"
 		}
 	],
@@ -137,36 +137,6 @@
 			"name": "description_json"
 		},
 		{
-			"url": "assets/assets/57cb9100bb71bd0cae2abd33e036f00.jpg",
-			"type": "image",
-			"name": "57cb9100bb71bd0cae2abd33e036f00_jpg"
-		},
-		{
-			"url": "assets/assets/9a492276ed8361d69d23fb123bf6b7d.jpg",
-			"type": "image",
-			"name": "9a492276ed8361d69d23fb123bf6b7d_jpg"
-		},
-		{
-			"url": "assets/assets/个人首页.jpg",
-			"type": "image",
-			"name": "个人首页_jpg"
-		},
-		{
-			"url": "assets/assets/已开通.jpg",
-			"type": "image",
-			"name": "已开通_jpg"
-		},
-		{
-			"url": "assets/assets/我的订单.jpg",
-			"type": "image",
-			"name": "我的订单_jpg"
-		},
-		{
-			"url": "assets/assets/组长首页.jpg",
-			"type": "image",
-			"name": "组长首页_jpg"
-		},
-		{
 			"url": "assets/assets/transaction_fill.png",
 			"type": "image",
 			"name": "transaction_fill_png"
@@ -220,6 +190,11 @@
 			"url": "assets/assets/time_fill.png",
 			"type": "image",
 			"name": "time_fill_png"
+		},
+		{
+			"url": "assets/assets/group_fill.png",
+			"type": "image",
+			"name": "group_fill_png"
 		}
 	]
 }

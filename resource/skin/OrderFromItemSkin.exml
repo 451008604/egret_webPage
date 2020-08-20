@@ -12,7 +12,11 @@
 			<e:Rect height="80" fillColor="0xFFFFFF" anchorOffsetY="0" y="0" horizontalCenter="0" width="720"/>
 			<e:Group y="14" left="22">
 				<e:Image source="enter_png" x="0" verticalCenter="0"/>
-				<e:Label id="exml_biaoTi" text="测试标题" x="52" fontFamily="SimHei" size="26" verticalCenter="0" maxWidth="646" height="26" textColor="0x000000"/>
+				<e:Label id="exml_biaoTi" text="测试标题" fontFamily="SimHei" size="26" textColor="0x000000" anchorOffsetX="0" x="52" anchorOffsetY="0" height="26" verticalCenter="0"/>
+				<e:Label id="exml_points" text="..." fontFamily="SimHei" size="26" verticalCenter="0" height="26" textColor="0x000000" anchorOffsetX="0" x="52" visible="true"/>
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" gap="0"/>
+				</e:layout>
 			</e:Group>
 			<e:Rect width="700" height="2" x="20" y="77" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xCDCDCD" scaleX="1" scaleY="1"/>
 		</e:Group>
@@ -20,7 +24,7 @@
 			<e:Rect height="80" fillColor="0xFFFFFF" anchorOffsetY="0" y="0" horizontalCenter="0" width="720"/>
 			<e:Group left="22" scaleX="1" scaleY="1" verticalCenter="0" right="0">
 				<e:Image source="enter_png" x="0" verticalCenter="0"/>
-				<e:Label id="exml_beiZhu" text="备注：金豹网" x="52" fontFamily="SimHei" size="26" verticalCenter="0" textColor="0x000000"/>
+				<e:Label id="exml_beiZhu" text="备注：金豹网" x="52" fontFamily="SimHei" size="26" verticalCenter="0" textColor="0x000000" visible="false"/>
 				<e:Label id="exml_yueDuCiShu" text="阅读次数：10/10" right="24" textColor="0xCDCDCD" fontFamily="SimHei" size="26" verticalCenter="0"/>
 			</e:Group>
 			<e:Rect height="2" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" strokeWeight="2" strokeColor="0xCDCDCD" scaleX="1" scaleY="1" left="-1" right="-1" visible="true" bottom="0"/>

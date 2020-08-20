@@ -10,11 +10,11 @@ class OrderFromItemData {
     public exml_yueDuCiShu: string = "";
 
     propertyMap = {
-        exml_shiJian: "exml_shiJian",
-        exml_tip: "exml_tip",
-        exml_biaoTi: "exml_biaoTi",
+        exml_shiJian: "releaseTime",
+        exml_tip: "releaseLabel",
+        exml_biaoTi: "releaseTitle",
         exml_beiZhu: "exml_beiZhu",
-        exml_yueDuCiShu: "exml_yueDuCiShu"
+        exml_yueDuCiShu: ""
     }
 
     constructor(value) {

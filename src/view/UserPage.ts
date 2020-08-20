@@ -68,11 +68,13 @@ class UserPage extends BaseScene {
     /**我要交费 */
     private woYaoJiaoFeiTouchHandler(e: egret.TouchEvent) {
         console.log("我要交费");
+        LayerManager.instance.showPage(PagesIndex.USERPAY);
     }
 
     /**交费记录 */
     private jiaoFeiJiLuTouchHandler(e: egret.TouchEvent) {
         console.log("交费记录");
+        LayerManager.instance.showPage(PagesIndex.PAYING);
     }
 
     /**邀请好友 */
@@ -83,16 +85,19 @@ class UserPage extends BaseScene {
     /**待审核 */
     private checkPendingTouchHandler(e: egret.TouchEvent) {
         console.log("待审核");
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
     }
 
     /**已开通 */
     private enabledTouchHandler(e: egret.TouchEvent) {
         console.log("已开通");
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
     }
 
     /**已禁用 */
     private disabledTouchHandler(e: egret.TouchEvent) {
         console.log("已禁用");
+        LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
     }
 
     /**申请提现 */
@@ -113,5 +118,6 @@ class UserPage extends BaseScene {
     /**跑量记录 */
     private paoLiangJiLuTouchHandler(e: egret.TouchEvent) {
         console.log("跑量记录");
+        LayerManager.instance.showPage(PagesIndex.ORDERFROM);
     }
 }

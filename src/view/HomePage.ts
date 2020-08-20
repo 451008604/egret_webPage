@@ -26,10 +26,6 @@ class HomePage extends BaseScene {
         LayerManager.instance.showPage(PagesIndex.USER);
     }
 
-    private exml_btn2TouchHandler() {
-        LayerManager.instance.showPage(PagesIndex.USERHOME);
-    }
-
     private exml_btn3TouchHandler() {
         LayerManager.instance.showPage(PagesIndex.STUDENT_ENABLED);
     }

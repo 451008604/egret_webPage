@@ -55,8 +55,8 @@
 			<e:Group x="-5" y="75">
 				<e:Rect height="77" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc" horizontalCenter="0" width="730"/>
 				<e:Group x="27" y="20">
-					<e:Image source="addition_fill1_png" x="0" y="0" anchorOffsetX="0" width="38" anchorOffsetY="0" height="38"/>
-					<e:Label text="组长自行开号名额" x="46" textColor="0xfd7302" fontFamily="SimHei" size="26" y="6"/>
+					<e:Image source="group_fill_png" x="0" y="0" anchorOffsetX="0" width="38" anchorOffsetY="0" height="38"/>
+					<e:Label text="我的团队" x="46" textColor="0xfd7302" fontFamily="SimHei" size="26" y="6"/>
 				</e:Group>
 				<e:Label id="exml_kaiHaoMingE" text="0 人" textColor="0xa9a7a9" fontFamily="SimHei" size="26" y="26" right="25"/>
 			</e:Group>
@@ -78,7 +78,81 @@
 				</e:Group>
 			</e:Group>
 		</e:Group>
-		<e:Group id="exml_item4" width="200" height="173" x="199" y="300" anchorOffsetY="0" visible="true">
+		<e:Group id="exml_item5" width="200" height="200" x="67" y="872" scaleX="1" scaleY="1" visible="true">
+			
+					
+					
+				
+			<e:Group y="0" horizontalCenter="0">
+				
+						
+						
+						
+					
+			<e:Rect height="75" y="0" anchorOffsetY="0" fillColor="0xffffff" width="730" horizontalCenter="0" strokeWeight="1" strokeColor="0xdcdcdc"/>
+			<e:Group x="27" y="19">
+					
+							
+							
+						
+				<e:Image source="stealth_fill_png" x="0" width="38" height="38" y="0"/>
+				<e:Label text="跑量概况" x="46" textColor="0xFD7302" fontFamily="SimHei" size="26" y="6"/>
+			</e:Group>
+			<e:Group id="exml_paoLiangJiLu" x="575" scaleX="1" scaleY="1" y="15">
+					
+							
+							
+							
+						
+				<e:Label text="跑量记录" x="0" textColor="0xA9A7A9" fontFamily="SimHei" size="26" y="10"/>
+				<e:Image source="enter_png" x="94.15" y="0" anchorOffsetX="0" width="45.2" anchorOffsetY="0" height="45.2"/>
+				<e:layout>
+						
+								
+							
+				<e:HorizontalLayout verticalAlign="middle" gap="0"/>
+				</e:layout>
+			</e:Group>
+			</e:Group>
+			<e:Group x="0" y="74" scaleX="1" scaleY="1">
+				
+						
+						
+						
+					
+			<e:Group x="0" y="0">
+					
+						
+						
+						
+						
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" x="0"/>
+				<e:Label id="exml_paoliangText1" text="115" y="26" textColor="0xA9A7A9" size="26" horizontalCenter="0" fontFamily="SimHei"/>
+				<e:Label text="今日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group x="239" y="0">
+					
+						
+						
+						
+						
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="242" x="0"/>
+				<e:Label id="exml_paoliangText2" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				<e:Label text="昨日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group y="0" width="240" horizontalCenter="240">
+					
+						
+						
+						
+						
+				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" horizontalCenter="0"/>
+				<e:Label id="exml_paoliangText3" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+				<e:Label text="剩余需求" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
+			</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:Group id="exml_item4" width="200" height="173" x="199" y="300" anchorOffsetY="0" visible="false">
 			<e:Group x="-5" y="0">
 				<e:Rect width="730" height="75" y="0" fillColor="0xffffff" anchorOffsetY="0" strokeWeight="1" horizontalCenter="0" strokeColor="0xdcdcdc"/>
 				<e:Group x="27" y="19">
@@ -98,39 +172,6 @@
 			<e:Group id="exml_tiChengJiLu" y="74" horizontalCenter="240">
 				<e:Rect width="240" height="100" y="0" anchorOffsetY="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" horizontalCenter="0"/>
 				<e:Label text="提成纪录" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0" verticalCenter="0"/>
-			</e:Group>
-		</e:Group>
-		<e:Group id="exml_item5" width="200" height="200" x="67" y="872" scaleX="1" scaleY="1" visible="true">
-			<e:Group y="0" horizontalCenter="0">
-				<e:Rect height="75" y="0" anchorOffsetY="0" fillColor="0xffffff" width="730" horizontalCenter="0" strokeWeight="1" strokeColor="0xdcdcdc"/>
-				<e:Group x="27" y="19">
-					<e:Image source="stealth_fill_png" x="0" width="38" height="38" y="0"/>
-					<e:Label text="跑量概况" x="46" textColor="0xFD7302" fontFamily="SimHei" size="26" y="6"/>
-				</e:Group>
-				<e:Group id="exml_paoLiangJiLu" x="575" scaleX="1" scaleY="1" y="15">
-					<e:Label text="跑量记录" x="0" textColor="0xA9A7A9" fontFamily="SimHei" size="26" y="10"/>
-					<e:Image source="enter_png" x="94.15" y="0" anchorOffsetX="0" width="45.2" anchorOffsetY="0" height="45.2"/>
-					<e:layout>
-						<e:HorizontalLayout verticalAlign="middle" gap="0"/>
-					</e:layout>
-				</e:Group>
-			</e:Group>
-			<e:Group x="0" y="74" scaleX="1" scaleY="1">
-				<e:Group x="0" y="0">
-				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" x="0"/>
-				<e:Label id="exml_paoliangText1" text="115" y="26" textColor="0xA9A7A9" size="26" horizontalCenter="0" fontFamily="SimHei"/>
-				<e:Label text="今日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
-				</e:Group>
-				<e:Group x="239" y="0">
-				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="242" x="0"/>
-				<e:Label id="exml_paoliangText2" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
-				<e:Label text="昨日跑量" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
-				</e:Group>
-				<e:Group y="0" width="240" horizontalCenter="240">
-				<e:Rect height="137" y="0" strokeWeight="1" fillColor="0xFFFFFF" strokeColor="0xDCDCDC" anchorOffsetY="0" width="240" horizontalCenter="0"/>
-				<e:Label id="exml_paoliangText3" text="115" y="26" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
-				<e:Label text="剩余需求" y="70" textColor="0xA9A7A9" size="26" fontFamily="SimHei" horizontalCenter="0"/>
-				</e:Group>
 			</e:Group>
 		</e:Group>
 		<e:layout>
