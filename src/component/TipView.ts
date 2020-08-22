@@ -53,8 +53,8 @@ class TipView extends eui.Component {
     }
 
     playAnimation1() {
-        this.scaleX = this.scaleY = 0;
-        egret.Tween.get(this).to({ scaleX: 1, scaleY: 1 }, 50).wait(1000).to({ y: this.y - 500, alpha: 0 }, 500).call(() => {
+        this.scaleY = 0;
+        egret.Tween.get(this).to({ scaleY: 1 }, 50).wait(1500).to({ y: this.y - 500, alpha: 0 }, 500).call(() => {
             this.remove();
         }, this);
     }
@@ -62,7 +62,7 @@ class TipView extends eui.Component {
     playAnimation2() {
         this.exml_text.textColor = 0xCC1313;
         this.scaleX = this.scaleY = 0;
-        egret.Tween.get(this).to({ scaleX: 1, scaleY: 1 }, 50).wait(1000).call(() => {
+        egret.Tween.get(this).to({ scaleX: 1, scaleY: 1 }, 50).wait(2000).call(() => {
             this.remove();
         }, this);
     }

@@ -3,28 +3,22 @@
  */
 class StudentItemData {
 
-    public exml_xueYuanBianHao: string = "";
-    public exml_tip: string = "";
-    public exml_icon: string = "";
-    public exml_yongHuMing: string = "";
-    public exml_zongPaoLiang: string = "";
-    public exml_zongJiaoFei: string = "";
-    public exml_zuiHouXiaDan: string = "";
-    public exml_zuiHouJiaoFei: string = "";
-    public exml_beiZhu: string = "";
-    public exml_jiaRuRiQi: string = "";
+    public exml_xueYuanBianHao: string = null;
+    public exml_tip: string = null;
+    public exml_icon: string = null;
+    public exml_yongHuMing: string = null;
+    public exml_zongJiaoFei: string = null;
+    public exml_zuiHouXiaDan: string = null;
+    public exml_zuiHouJiaoFei: string = null;
 
     propertyMap = {
         exml_xueYuanBianHao: "userId",
         exml_tip: "userLabel",
         exml_icon: "headUrl",
         exml_yongHuMing: "userName",
-        exml_zongPaoLiang: "test5",
         exml_zongJiaoFei: "money",
         exml_zuiHouXiaDan: "endAdressTime",
         exml_zuiHouJiaoFei: "endMoneyTime",
-        exml_beiZhu: "test9",
-        exml_jiaRuRiQi: "test10"
     }
 
     constructor(value) {

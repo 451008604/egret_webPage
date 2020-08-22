@@ -2,7 +2,7 @@ class PayingItem extends eui.ItemRenderer {
     public exml_shiJian: eui.Label;
     public exml_tip: eui.Button;
     public exml_beiZhu: eui.Label;
-    public exml_yueDuCiShu: eui.Label;
+    public exml_jiaoFeiJinE: eui.Label;
 
     private model: PayingItemData;
     constructor() {
@@ -18,6 +18,6 @@ class PayingItem extends eui.ItemRenderer {
         this.exml_shiJian.text = "" + this.model.exml_shiJian;
         this.exml_tip.label = "" + this.model.exml_tip;
         this.exml_beiZhu.text = "" + this.model.exml_beiZhu;
-        this.exml_yueDuCiShu.text = "" + this.model.exml_yueDuCiShu;
+        this.exml_jiaoFeiJinE.text = "" + this.model.exml_jiaoFeiJinE;
     }
 }

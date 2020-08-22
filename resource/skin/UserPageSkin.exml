@@ -31,7 +31,7 @@
 			<e:Group id="exml_jiaoFeiJiLu" x="360" y="0">
 				<e:Rect width="360" height="123" x="0" y="0" strokeWeight="1" fillColor="0xffffff" strokeColor="0xdcdcdc"/>
 				<e:Image y="16.31" source="success_fill_png" x="154"/>
-				<e:Label text="交费纪录" fontFamily="SimHei" textColor="0x686868" size="26" x="128" y="69"/>
+				<e:Label text="交费记录" fontFamily="SimHei" textColor="0x686868" size="26" x="128" y="69"/>
 			</e:Group>
 			<e:layout>
 				<e:HorizontalLayout gap="0"/>

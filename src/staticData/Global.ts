@@ -11,10 +11,16 @@ class Global {
         USER_PAY_PAGE: "wechatAction!pay.action",
         /**学员 - 已开通页 */
         STUDENT_ENABLED_PAGE: "wechatAction!getMyAllTeamMessage.action",
-        /**全部交费页 */
-        PAYING_PAGE: "historyHistoryAction!getAllhistory.action",
         /**订单页 */
-        ORDER_FROM_PAGE: "releaseAdressAction!getDayAdress.action"
+        ORDER_FROM_PAGE: "releaseAdressAction!getDayAdress.action",
+        /**缴费记录 */
+        USER_PAYING: "historyHistoryAction!getAllhistory.action",
+        // TODO 未使用
+        /**审核通过 */
+        CHECK_SUCCESS: "wechatAction!updateLabel.action",
+        // TODO 未使用
+        /**启用或禁用 */
+        ENABLE_OR_DISENABLE: "wechatAction!updateNorber.action"
     }
 
     /**舞台高度 */

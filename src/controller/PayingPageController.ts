@@ -1,23 +1,26 @@
 class PayingPageController extends BaseController {
 
-    private _displayView:PayingPage;
+    private _displayView: PayingPage;
     /**显示视图 */
-    public get displayView():PayingPage {
+    public get displayView(): PayingPage {
         return this._displayView;
     }
-    public set displayView(v:PayingPage) {
+    public set displayView(v: PayingPage) {
         this._displayView = v;
         this.init();
     }
 
     public arrayCollection: eui.ArrayCollection;
     private infoList: PayingItemData[] = [];
+    private pageIndex: number = 0;
 
     constructor() {
         super();
     }
 
     init() {
+        this.displayView.exml_titleBar.exml_titleText.text = "交费记录";
+        this.displayView.exml_titleBar.exml_set.visible = false;
         this.displayView.exml_scroller.horizontalCenter.autoVisibility = false;
         this.displayView.exml_scroller.horizontalCenter.visible = false;
         this.displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
@@ -27,88 +30,26 @@ class PayingPageController extends BaseController {
         this.displayView.exml_scrollerList.useVirtualLayout = true;
         this.displayView.exml_scrollerList.itemRenderer = PayingItem;
         this.displayView.exml_scrollerList.dataProvider = this.arrayCollection;
+        this.displayView.exml_scroller.addEventListener(eui.UIEvent.CHANGE_END, (res) => {
+            if (this.displayView.exml_scroller.viewport.scrollV + this.displayView.exml_scroller.viewport.height >= this.displayView.exml_scroller.viewport.contentHeight) {
+                this.pageIndex++;
+                this.requestData();
+            }
+        }, this);
 
         this.requestData();
     }
 
     requestData() {
-        // HttpManager.instance.sendMessage(null, (res) => {
-        this.infoList.splice(0, this.infoList.length);
-        for (let item of payingTempList) {
-            this.infoList.push(new PayingItemData(item));
-        }
-        this.beforUpdateView();
-        // }, this);
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAYING, { userId: Global.USER_INFO.userId, page: this.pageIndex }, (res) => {
+            for (let item of res.data.listHistory) {
+                this.infoList.push(new PayingItemData(item));
+            }
+            this.beforUpdateView();
+        }, this, egret.HttpMethod.POST);
     }
 
     beforUpdateView() {
-
+        this.arrayCollection.replaceAll(this.infoList);
     }
 }
-
-let payingTempList = [{
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}, {
-    exml_shiJian: `${new Date().getFullYear() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getDate()}`,
-    exml_tip: "交费 - 已付款",
-    exml_beiZhu: "交费金额",
-    exml_yueDuCiShu: "5.00元"
-}]

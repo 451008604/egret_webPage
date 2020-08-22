@@ -4,15 +4,15 @@
 class PayingItemData {
 
     public exml_shiJian: string = "";
-    public exml_tip: string = "";
+    public exml_tip: string = "已付款";
     public exml_beiZhu: string = "";
-    public exml_yueDuCiShu: string = "";
+    public exml_jiaoFeiJinE: string = "";
 
     propertyMap = {
-        exml_shiJian: "exml_shiJian",
+        exml_shiJian: "historyTime",
         exml_tip: "exml_tip",
-        exml_beiZhu: "exml_beiZhu",
-        exml_yueDuCiShu: "exml_yueDuCiShu"
+        exml_beiZhu: "orderNumber",
+        exml_jiaoFeiJinE: "money"
     }
 
     constructor(value) {

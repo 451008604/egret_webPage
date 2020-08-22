@@ -1,16 +1,16 @@
 class OrderFromPageController extends BaseController {
 
-    private _displayView:OrderFromPage;
+    private _displayView: OrderFromPage;
     /**显示视图 */
-    public get displayView():OrderFromPage {
+    public get displayView(): OrderFromPage {
         return this._displayView;
     }
-    public set displayView(v:OrderFromPage) {
+    public set displayView(v: OrderFromPage) {
         this._displayView = v;
         this.init();
     }
 
-    public arrCollection: eui.ArrayCollection;
+    public arrayCollection: eui.ArrayCollection;
     private infoList: OrderFromItemData[] = [];
 
     private pageIndex: number = 0;
@@ -21,16 +21,25 @@ class OrderFromPageController extends BaseController {
     }
 
     init() {
-        this.displayView.exml_titleBar.exml_titleText.text = "我的订单 - 所有状态";
+        let titTxt: string = "";
+        if (this.type == 1) {
+            titTxt = "今日跑量";
+        } else if (this.type == 2) {
+            titTxt = "昨日跑量";
+        } else if (this.type == 3) {
+            titTxt = "剩余需求";
+        }
+        this.displayView.exml_titleBar.exml_titleText.text = "" + titTxt;
+        this.displayView.exml_titleBar.exml_set.visible = false;
         this.displayView.exml_scroller.horizontalScrollBar.autoVisibility = false;
         this.displayView.exml_scroller.horizontalScrollBar.visible = false;
         this.displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
         this.displayView.exml_scroller.verticalScrollBar.visible = false;
 
-        this.arrCollection = new eui.ArrayCollection(this.infoList);
+        this.arrayCollection = new eui.ArrayCollection(this.infoList);
         this.displayView.exml_scrollerList.useVirtualLayout = true;
         this.displayView.exml_scrollerList.itemRenderer = OrderFromItem;
-        this.displayView.exml_scrollerList.dataProvider = this.arrCollection;
+        this.displayView.exml_scrollerList.dataProvider = this.arrayCollection;
         this.displayView.exml_scroller.addEventListener(eui.UIEvent.CHANGE_END, (res) => {
             if (this.displayView.exml_scroller.viewport.scrollV + this.displayView.exml_scroller.viewport.height >= this.displayView.exml_scroller.viewport.contentHeight) {
                 this.pageIndex++;
@@ -51,6 +60,6 @@ class OrderFromPageController extends BaseController {
     }
 
     beforUpdateView() {
-        this.arrCollection.replaceAll(this.infoList);
+        this.arrayCollection.replaceAll(this.infoList);
     }
 }

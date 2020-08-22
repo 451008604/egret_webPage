@@ -41,13 +41,13 @@ class LayerManager {
                 break;
             case PagesIndex.STUDENT_ENABLED:
                 let studentEnabledPage: StudentEnabledPage = new StudentEnabledPage();
-                studentEnabledPage.show();
                 studentEnabledPage.studentEnabledPageController.type = data;
+                studentEnabledPage.show();
                 break;
             case PagesIndex.ORDERFROM:
                 let orderFromPage: OrderFromPage = new OrderFromPage();
-                orderFromPage.show();
                 orderFromPage.orderFromPageController.type = data;
+                orderFromPage.show();
                 break;
             case PagesIndex.USERPAY:
                 new UserPayPage().show();

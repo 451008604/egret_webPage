@@ -26,16 +26,17 @@ class OrderFromItem extends eui.ItemRenderer {
         this.exml_beiZhu.text = "" + this.model.exml_beiZhu;
 
         if (Number(this.model.exml_tip) == 2) {
-            (this.exml_tip["exml_bg"] as eui.Rect).fillColor = 0x13b505;
-            (this.exml_tip["exml_bg"] as eui.Rect).strokeColor = 0x119b04;
+            (this.exml_tip["exml_bg"] as eui.Rect).fillColor = 0x5cb85c;
+            (this.exml_tip["exml_bg"] as eui.Rect).strokeColor = 0x5cb85c;
             this.exml_tip.label = "已完成";
             this.exml_yueDuCiShu.text = "阅读次数：10/10";
         } else if (Number(this.model.exml_tip) == 1) {
-            (this.exml_tip["exml_bg"] as eui.Rect).fillColor = 0xff9800;
-            (this.exml_tip["exml_bg"] as eui.Rect).strokeColor = 0xa66300;
+            (this.exml_tip["exml_bg"] as eui.Rect).fillColor = 0xf0ad4e;
+            (this.exml_tip["exml_bg"] as eui.Rect).strokeColor = 0xf0ad4e;
             this.exml_tip.label = "未完成";
             this.exml_yueDuCiShu.text = "阅读次数：0/10";
         }
+        (this.exml_tip["exml_bg"] as eui.Rect).strokeAlpha = 0.5;
 
         if (this.exml_biaoTi.width >= 620) {
             this.exml_biaoTi.width = 580;
