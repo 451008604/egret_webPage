@@ -3,7 +3,7 @@
  */
 class UserPageData {
 
-    public userOpenid: number = 0;
+    public userOpenid: string = "oEbYe6KgXlz7xVla_U8dlq-kmil0";
     public userId: number = 0;
     public userLeavel: number = 0;
     public exml_bianHao: string = "";

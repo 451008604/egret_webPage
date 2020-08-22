@@ -23,16 +23,17 @@ class UserPayPage extends BaseScene {
 
     private submitBtnTouchHandler() {
         console.log("立即支付");
+        this.userPayPageController.requestData();
     }
 
     private inputTextFocusHandler(e: egret.FocusEvent) {
         if (e.type == egret.FocusEvent.FOCUS_IN) {
-            if (this.exml_inputText.text == "在此输入交费金额") {
+            if (this.exml_inputText.text == "在此输入交费金额（元）") {
                 this.exml_inputText.text = "";
             }
         } else if (e.type == egret.FocusEvent.FOCUS_OUT) {
-            if (this.exml_inputText.text == "") {
-                this.exml_inputText.text = "在此输入交费金额";
+            if (isNaN(Number(this.exml_inputText.text)) || this.exml_inputText.text == "") {
+                this.exml_inputText.text = "在此输入交费金额（元）";
             }
         }
     }

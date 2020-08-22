@@ -1,13 +1,22 @@
 class UserPageController extends BaseController {
 
+    private _displayView: UserPage;
+    /**显示视图 */
+    public get displayView(): UserPage {
+        return this._displayView;
+    }
+    public set displayView(v: UserPage) {
+        this._displayView = v;
+        this.init();
+    }
+
     constructor() {
         super();
     }
 
     init() {
-        let displayView = (this.displayView as UserPage);
-        displayView.exml_bg.height = Global.STAGE_HEIGHT;
-        displayView.exml_touXiang.mask = displayView.exml_iconMask;
+        this.displayView.exml_bg.height = Global.STAGE_HEIGHT;
+        this.displayView.exml_touXiang.mask = this.displayView.exml_iconMask;
 
         this.requestData();
     }

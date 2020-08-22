@@ -36,9 +36,11 @@ class HttpManager {
 
         let requestSuccessHandler = function (res: egret.Event) {
             let request: egret.HttpRequest = res.currentTarget as egret.HttpRequest;
-            let data: Object = JSON.parse(request.response);
-            callback.bind(thisObj);
-            callback(data);
+            if (request.response) {
+                let data: Object = JSON.parse(request.response);
+                callback.bind(thisObj);
+                callback(data);
+            }
         }
 
         let progressHandler = function (evt: egret.ProgressEvent) {

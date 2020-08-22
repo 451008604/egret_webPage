@@ -1,5 +1,15 @@
 class StudentEnabledPageController extends BaseController {
 
+    private _displayView: StudentEnabledPage;
+    /**显示视图 */
+    public get displayView(): StudentEnabledPage {
+        return this._displayView;
+    }
+    public set displayView(v: StudentEnabledPage) {
+        this._displayView = v;
+        this.init();
+    }
+
     public arrayCollection: eui.ArrayCollection;
     private infoList: StudentItemData[] = [];
 
@@ -11,19 +21,18 @@ class StudentEnabledPageController extends BaseController {
     }
 
     init() {
-        let displayView = (this.displayView as StudentEnabledPage);
-        displayView.exml_titleBar.exml_set.visible = false;
-        displayView.exml_scroller.horizontalScrollBar.autoVisibility = false;
-        displayView.exml_scroller.horizontalScrollBar.visible = false;
-        displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
-        displayView.exml_scroller.verticalScrollBar.visible = false;
+        this.displayView.exml_titleBar.exml_set.visible = false;
+        this.displayView.exml_scroller.horizontalScrollBar.autoVisibility = false;
+        this.displayView.exml_scroller.horizontalScrollBar.visible = false;
+        this.displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
+        this.displayView.exml_scroller.verticalScrollBar.visible = false;
 
         this.arrayCollection = new eui.ArrayCollection(this.infoList);
-        displayView.exml_scrollerList.useVirtualLayout = true;
-        displayView.exml_scrollerList.itemRenderer = StudentItem;
-        displayView.exml_scrollerList.dataProvider = this.arrayCollection;
-        displayView.exml_scroller.addEventListener(eui.UIEvent.CHANGE_END, (res) => {
-            if (displayView.exml_scroller.viewport.scrollV + displayView.exml_scroller.viewport.height >= displayView.exml_scroller.viewport.contentHeight) {
+        this.displayView.exml_scrollerList.useVirtualLayout = true;
+        this.displayView.exml_scrollerList.itemRenderer = StudentItem;
+        this.displayView.exml_scrollerList.dataProvider = this.arrayCollection;
+        this.displayView.exml_scroller.addEventListener(eui.UIEvent.CHANGE_END, (res) => {
+            if (this.displayView.exml_scroller.viewport.scrollV + this.displayView.exml_scroller.viewport.height >= this.displayView.exml_scroller.viewport.contentHeight) {
                 this.pageIndex++;
                 this.requestData();
             }

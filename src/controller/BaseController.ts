@@ -2,16 +2,6 @@ abstract class BaseController {
     constructor() {
     }
 
-    private _displayView;
-    /**显示视图 */
-    public get displayView() {
-        return this._displayView;
-    }
-    public set displayView(v) {
-        this._displayView = v;
-        this.init();
-    }
-
     /**数据模型 */
     protected dataModel;
     /**初始化 */

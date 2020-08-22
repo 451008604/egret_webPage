@@ -42,6 +42,7 @@
 		"resource/skin/PayingPageSkin.exml",
 		"resource/skin/StudentEnabledPageSkin.exml",
 		"resource/skin/StudentItemSkin.exml",
+		"resource/skin/TipViewSkin.exml",
 		"resource/skin/UserPageSkin.exml",
 		"resource/skin/UserPayPageSkin.exml"
 	],
