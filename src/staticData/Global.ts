@@ -43,4 +43,13 @@ class Global {
         }
         return json;
     }
+
+    private static _returnCitySN: { "cip": string, "cid": string, "cname": string } = { "cip": "127.0.01", "cid": "000001", "cname": "earth" };
+    public static get returnCitySN(): { "cip": string, "cid": string, "cname": string } {
+        if (window["returnCitySN"]) {
+            this._returnCitySN = window["returnCitySN"];
+        }
+        console.log("returnCitySN = " + JSON.stringify(this._returnCitySN));
+        return this._returnCitySN;
+    }
 }

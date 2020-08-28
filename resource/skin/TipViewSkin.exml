@@ -2,5 +2,5 @@
 <e:Skin class="TipViewSkin"
  xmlns:e="http://ns.egret.com/eui">
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xC0C0C0" ellipseWidth="30" ellipseHeight="30"/>
-	<e:Label id="exml_text" fontFamily="SimHei" maxWidth="360" textAlign="center" text="test" left="30" top="30" bottom="30" right="30" textColor="0x000000"/>
+	<e:Label id="exml_text" fontFamily="SimHei" maxWidth="360" textAlign="center" text="test" left="30" top="30" bottom="30" right="30" textColor="0x000000" verticalAlign="middle"/>
 </e:Skin>

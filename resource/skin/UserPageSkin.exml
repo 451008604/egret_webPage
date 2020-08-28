@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="UserPageSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect id="exml_bg" top="0" bottom="0" left="0" right="0" fillColor="0xf3f3f3" visible="true" strokeWeight="0"/>
-	<e:Group height="230" left="0" right="0" locked="true">
+	<e:Group height="230" left="0" right="0">
 		<e:Rect anchorOffsetY="0" fillColor="0x099400" fillAlpha="1" left="0" right="0" top="0" bottom="0"/>
 		<e:Label id="exml_bianHao" text="组长编号：XXXX" x="20" y="23" size="23"/>
-		<e:Image id="exml_touXiang" width="95" height="95" y="36" source="egret_icon_png" visible="true" horizontalCenter="0"/>
+		<e:Image id="exml_touXiang" width="95" height="95" y="36" visible="true" horizontalCenter="0"/>
 		<e:Rect id="exml_iconMask" width="95" height="95" y="36" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="999" ellipseHeight="999" visible="true" horizontalCenter="0" strokeColor="0xffffff"/>
 		<e:Rect id="exml_iconBorder" width="95" height="95" y="36" anchorOffsetX="0" anchorOffsetY="0" fillAlpha="0" ellipseWidth="999" ellipseHeight="999" visible="true" horizontalCenter="0" strokeWeight="5" strokeColor="0xFFFFFF"/>
 		<e:Button id="exml_yongHuMingCheng" label="userName" y="153.2" anchorOffsetX="0" width="142" anchorOffsetY="0" height="42" horizontalCenter="0">

@@ -18,6 +18,7 @@ class UserPayPageController extends BaseController {
         this.displayView.exml_titleBar.exml_titleText.text = "我要交费";
         this.displayView.exml_titleBar.exml_set.visible = false;
         this.displayView.exml_inputText.text = "在此输入交费金额（元）";
+        this.displayView.exml_inputText.inputType =egret.TextFieldInputType.TEL;
     }
 
     requestData() {
@@ -26,7 +27,7 @@ class UserPayPageController extends BaseController {
             return;
         }
         this.displayView.exml_submitBtn.touchEnabled = false;
-        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAY_PAGE, { money: this.displayView.exml_inputText.text, openId: Global.USER_INFO.userOpenid, ip: window['returnCitySN']['cip'] }, (res) => {
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAY_PAGE, { money: this.displayView.exml_inputText.text, openId: Global.USER_INFO.userOpenid, ip: Global.returnCitySN.cip }, (res) => {
             this.beforUpdateView();
         }, this, egret.HttpMethod.POST);
     }

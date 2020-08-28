@@ -1,11 +1,21 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,group_fill_png,addition_fill_png,addition_fill1_png,enter_png,homepage_png,people_fill_png,search_png,setup_png,stealth_fill_png,success_fill_png,time_fill_png,transaction_fill_png",
+			"keys": "button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,addition_fill_png,addition_fill1_png,enter_png,group_fill_png,homepage_png,people_fill_png,search_png,setup_png,stealth_fill_png,success_fill_png,time_fill_png,transaction_fill_png",
 			"name": "preload"
 		}
 	],
 	"resources": [
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
 		{
 			"url": "assets/CheckBox/checkbox_select_disabled.png",
 			"type": "image",
@@ -42,6 +52,16 @@
 			"name": "header_png"
 		},
 		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
 			"url": "assets/RadioButton/radiobutton_select_disabled.png",
 			"type": "image",
 			"name": "radiobutton_select_disabled_png"
@@ -65,6 +85,11 @@
 			"url": "assets/ScrollBar/roundthumb.png",
 			"type": "image",
 			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
 		},
 		{
 			"url": "assets/Slider/thumb.png",
@@ -97,69 +122,9 @@
 			"name": "on_png"
 		},
 		{
-			"url": "assets/Button/button_down.png",
-			"type": "image",
-			"name": "button_down_png"
-		},
-		{
-			"url": "assets/Button/button_up.png",
-			"type": "image",
-			"name": "button_up_png"
-		},
-		{
-			"url": "assets/ProgressBar/thumb_pb.png",
-			"type": "image",
-			"name": "thumb_pb_png"
-		},
-		{
-			"url": "assets/ProgressBar/track_pb.png",
-			"type": "image",
-			"name": "track_pb_png"
-		},
-		{
-			"url": "assets/ScrollBar/track_sb.png",
-			"type": "image",
-			"name": "track_sb_png"
-		},
-		{
-			"url": "assets/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
-			"url": "assets/egret_icon.png",
-			"type": "image",
-			"name": "egret_icon_png"
-		},
-		{
-			"url": "config/description.json",
-			"type": "json",
-			"name": "description_json"
-		},
-		{
-			"url": "assets/assets/transaction_fill.png",
-			"type": "image",
-			"name": "transaction_fill_png"
-		},
-		{
-			"url": "assets/assets/stealth_fill.png",
-			"type": "image",
-			"name": "stealth_fill_png"
-		},
-		{
-			"url": "assets/assets/people_fill.png",
-			"type": "image",
-			"name": "people_fill_png"
-		},
-		{
 			"url": "assets/assets/addition_fill.png",
 			"type": "image",
 			"name": "addition_fill_png"
-		},
-		{
-			"url": "assets/assets/success_fill.png",
-			"type": "image",
-			"name": "success_fill_png"
 		},
 		{
 			"url": "assets/assets/addition_fill1.png",
@@ -172,9 +137,19 @@
 			"name": "enter_png"
 		},
 		{
+			"url": "assets/assets/group_fill.png",
+			"type": "image",
+			"name": "group_fill_png"
+		},
+		{
 			"url": "assets/assets/homepage.png",
 			"type": "image",
 			"name": "homepage_png"
+		},
+		{
+			"url": "assets/assets/people_fill.png",
+			"type": "image",
+			"name": "people_fill_png"
 		},
 		{
 			"url": "assets/assets/search.png",
@@ -187,14 +162,24 @@
 			"name": "setup_png"
 		},
 		{
+			"url": "assets/assets/stealth_fill.png",
+			"type": "image",
+			"name": "stealth_fill_png"
+		},
+		{
+			"url": "assets/assets/success_fill.png",
+			"type": "image",
+			"name": "success_fill_png"
+		},
+		{
 			"url": "assets/assets/time_fill.png",
 			"type": "image",
 			"name": "time_fill_png"
 		},
 		{
-			"url": "assets/assets/group_fill.png",
+			"url": "assets/assets/transaction_fill.png",
 			"type": "image",
-			"name": "group_fill_png"
+			"name": "transaction_fill_png"
 		}
 	]
 }

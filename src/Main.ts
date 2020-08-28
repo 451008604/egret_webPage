@@ -34,6 +34,9 @@ class Main extends eui.UILayer {
         Global.STAGE_HEIGHT = this.stage.stageHeight;
         Global.STAGE_WIDTH = this.stage.stageWidth;
         this.addChild(LayerManager.instance.init());
+        if (Global.GET_URL_PARAM["vconsole"] == "1" && window["VConsole"]) {
+            new window["VConsole"]();
+        }
     }
 
     private async loadResource() {
@@ -55,7 +58,6 @@ class Main extends eui.UILayer {
             theme.addEventListener(eui.UIEvent.COMPLETE, () => {
                 resolve();
             }, this);
-
         })
     }
 }
