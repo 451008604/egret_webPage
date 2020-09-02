@@ -11,9 +11,9 @@ class TipView extends eui.Component {
      * 提示
      * @param _text 提示文字
      * @param _type 动画类型
-     * @param _isRepetition 是否重复弹出（为false时  全局同一时间只能弹出一个弹框）
-     * @param _callBack 回调函数
-     * @param _thisObject 作用域
+     * @param _isRepetition 是否重复弹出（为false时  全局同一时间只能弹出一个弹框），默认为：true
+     * @param _callBack 回调函数，默认为：null
+     * @param _thisObject 回调作用域，默认为：null
      */
     constructor(_text: string, _type: number, _isRepetition: boolean = true, _callBack: Function = null, _thisObject: Object = null) {
         super();
