@@ -7,12 +7,17 @@ class Global {
     static INTERFACE_TYPE = {
         /**组长页 */
         USER_PAGE: "wechatAction!insertUser.action",
+        ORDER_DATA: "releaseAdressAction!getALLAmount.action",
         /**用户支付页 */
         USER_PAY_PAGE: "wechatAction!pay.action",
         /**学员 - 已开通页 */
         STUDENT_ENABLED_PAGE: "wechatAction!getMyAllTeamMessage.action",
+        STUDENT_SELECT:"wechatAction!getUserByUserId.action",
+        STUDENT_UPDATEINFO1: "wechatAction!updateLabel.action",
+        STUDENT_UPDATEINFO2: "wechatAction!updateNorber.action",
         /**订单页 */
         ORDER_FROM_PAGE: "releaseAdressAction!getDayAdress.action",
+        ORDER_FROM_PAGE_HISTORY: "releaseAdressAction!getAllHistoryAdress.action",
         /**缴费记录 */
         USER_PAYING: "historyHistoryAction!getAllhistory.action",
         // TODO 未使用

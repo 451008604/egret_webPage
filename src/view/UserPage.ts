@@ -25,6 +25,7 @@ class UserPage extends BaseScene {
     public exml_tiXianJiLu: eui.Group;
     public exml_tiChengJiLu: eui.Group;
     public exml_item5: eui.Group;
+    public exml_paoLiangJiLu:eui.Group;
     public exml_paoLiangJiLu1: eui.Group;
     public exml_paoLiangJiLu2: eui.Group;
     public exml_paoLiangJiLu3: eui.Group;
@@ -49,6 +50,7 @@ class UserPage extends BaseScene {
         this.exml_shenQingTiXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.shenQingTiXianTouchHandler, this);
         this.exml_tiXianJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiXianJiLuTouchHandler, this);
         this.exml_tiChengJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.tiChengJiLuTouchHandler, this);
+        this.exml_paoLiangJiLu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLuTouchHandler, this);
         this.exml_paoLiangJiLu1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu1TouchHandler, this);
         this.exml_paoLiangJiLu2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu2TouchHandler, this);
         this.exml_paoLiangJiLu3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.paoLiangJiLu3TouchHandler, this);
@@ -117,6 +119,12 @@ class UserPage extends BaseScene {
     /**提成记录 */
     private tiChengJiLuTouchHandler(e: egret.TouchEvent) {
         console.log("提成记录");
+    }
+
+    /**跑量记录 */
+    private paoLiangJiLuTouchHandler(e: egret.TouchEvent) {
+        console.log("跑量记录");
+        LayerManager.instance.showPage(PagesIndex.ORDERFROM);
     }
 
     /**今日跑量 */

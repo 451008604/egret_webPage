@@ -13,7 +13,7 @@ class OrderFromPageController extends BaseController {
     public arrayCollection: eui.ArrayCollection;
     private infoList: OrderFromItemData[] = [];
 
-    private pageIndex: number = 0;
+    private pageIndex: number = 1;
     public type: number = 0;
 
     constructor() {
@@ -28,6 +28,8 @@ class OrderFromPageController extends BaseController {
             titTxt = "昨日跑量";
         } else if (this.type == 3) {
             titTxt = "剩余需求";
+        } else {
+            titTxt = "跑量记录";
         }
         this.displayView.exml_titleBar.exml_titleText.text = "" + titTxt;
         this.displayView.exml_titleBar.exml_set.visible = false;
@@ -35,6 +37,7 @@ class OrderFromPageController extends BaseController {
         this.displayView.exml_scroller.horizontalScrollBar.visible = false;
         this.displayView.exml_scroller.verticalScrollBar.autoVisibility = false;
         this.displayView.exml_scroller.verticalScrollBar.visible = false;
+        this.displayView.exml_scrollerList.height = Global.STAGE_HEIGHT - this.displayView.exml_scroller.y;
 
         this.arrayCollection = new eui.ArrayCollection(this.infoList);
         this.displayView.exml_scrollerList.useVirtualLayout = true;
@@ -47,11 +50,26 @@ class OrderFromPageController extends BaseController {
             }
         }, this);
 
-        this.requestData();
+        if (this.type == 1 || this.type == 2 || this.type == 3) {
+            this.requestData();
+        } else {
+            this.requestHistoryData();
+        }
     }
 
+    // 获取昨日、今日、剩余  数据
     requestData() {
         HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_FROM_PAGE, { userId: Global.USER_INFO.userId, page: this.pageIndex, type: this.type }, (res) => {
+            for (let item of res.data.listAdress) {
+                this.infoList.push(new OrderFromItemData(item));
+            }
+            this.beforUpdateView();
+        }, this, egret.HttpMethod.POST);
+    }
+
+    // 获取总记录数据
+    requestHistoryData() {
+        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_FROM_PAGE_HISTORY, { userId: Global.USER_INFO.userId, page: this.pageIndex }, (res) => {
             for (let item of res.data.listAdress) {
                 this.infoList.push(new OrderFromItemData(item));
             }

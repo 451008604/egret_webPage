@@ -2,7 +2,7 @@
 <e:Skin class="StudentEnabledPageSkin"
 	 width="720"
 	height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect id="exml_bg" left="0" right="0" fillColor="0xF3F3F3" visible="true" top="0" bottom="0" locked="true"/>
+	<e:Rect id="exml_bg" fillColor="0xF3F3F3" visible="true" height="1280" width="720" y="0" x="0"/>
 	<ns1:TitleBar id="exml_titleBar" skinName="TitleBarSkin" visible="true" horizontalCenter="0" top="0"/>
 	<e:Group y="84" visible="true" horizontalCenter="0">
 		<e:Rect height="85" y="0" anchorOffsetY="0" visible="true" fillColor="0xFFFFFF" horizontalCenter="0" width="724" strokeColor="0xDCDCDC" strokeWeight="1"/>
@@ -11,8 +11,8 @@
 		<e:Image source="search_png" x="20" verticalCenter="0"/>
 		<e:TextInput id="exml_textInput" x="72" skinName="skins.TextInput1Skin" height="52" y="17" width="400"/>
 	</e:Group>
-	<e:Scroller id="exml_scroller" left="0" right="0" bottom="0" top="187" skinName="skins.ScrollerSkin">
-		<e:List id="exml_scrollerList" left="0" right="0" top="0" bottom="0">
+	<e:Scroller id="exml_scroller" left="0" right="0" skinName="skins.ScrollerSkin" y="187">
+		<e:List id="exml_scrollerList" left="0" right="0" visible="true">
 			<e:layout>
 				<e:VerticalLayout horizontalAlign="center" gap="20"/>
 			</e:layout>

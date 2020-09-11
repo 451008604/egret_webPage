@@ -28,10 +28,16 @@ class StudentEnabledPage extends BaseScene {
 
     private submitTouchHandler(e: egret.TouchEvent) {
         console.log("搜索");
+        this.studentEnabledPageController.selectData(this.exml_textInput.text);
+        this.studentEnabledPageController.arrayCollection.refresh()
     }
 
     private cleanTouchHandler(e: egret.TouchEvent) {
         console.log("清除");
         this.exml_textInput.text = "";
+
+        this.studentEnabledPageController.pageIndex = 1;
+        this.studentEnabledPageController.infoList.splice(0);
+        this.studentEnabledPageController.requestData();
     }
 }

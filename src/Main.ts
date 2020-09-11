@@ -21,6 +21,9 @@ class Main extends eui.UILayer {
         egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
 
+        if (window.document.body.clientHeight / window.document.body.clientWidth >= (1280 / 720)) {
+            this.stage.scaleMode = egret.StageScaleMode.FIXED_WIDTH;
+        }
 
         this.runGame().catch(e => {
             console.log(e);

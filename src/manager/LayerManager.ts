@@ -32,29 +32,38 @@ class LayerManager {
 
     showPage(index, data = null) {
         this.sceneLayer.removeChildren();
+        let page = null;
         switch (index) {
             case PagesIndex.HOME:
-                new HomePage().show();
+                page = new HomePage();
+                page.show();
                 break;
             case PagesIndex.USER:
-                new UserPage().show();
+                page = new UserPage();
+                page.show();
                 break;
             case PagesIndex.STUDENT_ENABLED:
-                let studentEnabledPage: StudentEnabledPage = new StudentEnabledPage();
-                studentEnabledPage.studentEnabledPageController.type = data;
-                studentEnabledPage.show();
+                page = new StudentEnabledPage();
+                StudentEnabledPageController.type = data;
+                page.show();
                 break;
             case PagesIndex.ORDERFROM:
-                let orderFromPage: OrderFromPage = new OrderFromPage();
-                orderFromPage.orderFromPageController.type = data;
-                orderFromPage.show();
+                page = new OrderFromPage();
+                page.orderFromPageController.type = data;
+                page.show();
                 break;
             case PagesIndex.USERPAY:
-                new UserPayPage().show();
+                page = new UserPayPage();
+                page.show();
                 break;
             case PagesIndex.PAYING:
-                new PayingPage().show();
+                page = new PayingPage();
+                page.show();
                 break;
+        }
+
+        if (page.exml_bg) {
+            (page.exml_bg as eui.Rect).height = Global.STAGE_HEIGHT;
         }
     }
 }

@@ -14,24 +14,44 @@ class UserPageController extends BaseController {
         super();
     }
 
-    init() {
+    async init() {
         this.displayView.exml_bg.height = Global.STAGE_HEIGHT;
         this.displayView.exml_touXiang.mask = this.displayView.exml_iconMask;
 
-        this.requestData();
+        await this.requestData();
+        await this.requestOrderData();
+        this.beforUpdateView();
     }
 
     requestData() {
-        if (Global.USER_INFO != null) {
-            this.dataModel = Global.USER_INFO;
-            this.beforUpdateView();
-            return;
-        }
-        HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAGE, { code: Global.GET_URL_PARAM['code'], invitationId: Global.GET_URL_PARAM['invitationId'] }, (res) => {
-            new UserPageData(res.data);
-            this.dataModel = Global.USER_INFO;
-            this.beforUpdateView();
-        }, this, egret.HttpMethod.POST);
+        return new Promise((resolve, reject) => {
+            if (Global.USER_INFO != null) {
+                this.dataModel = Global.USER_INFO;
+                resolve();
+                return;
+            }
+            HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.USER_PAGE, { code: Global.GET_URL_PARAM['code'], invitationId: Global.GET_URL_PARAM['invitationId'] }, (res) => {
+                new UserPageData(res.data);
+                this.dataModel = Global.USER_INFO;
+                resolve();
+            }, this, egret.HttpMethod.POST);
+        })
+    }
+
+    requestOrderData() {
+        return new Promise((resolve, reject) => {
+            HttpManager.instance.sendMessage(Global.INTERFACE_TYPE.ORDER_DATA, { userId: Global.USER_INFO.userId }, (res) => {
+                for (let i in res.data) {
+                    for (let j in this.dataModel.propertyMap) {
+                        if (this.dataModel.propertyMap[j] == i) {
+                            this.dataModel[j] = res.data[i];
+                            break;
+                        }
+                    }
+                }
+                resolve();
+            }, this, egret.HttpMethod.POST);
+        })
     }
 
     beforUpdateView() {

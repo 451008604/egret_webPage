@@ -32,12 +32,12 @@ class UserPayPageController extends BaseController {
             function onBridgeReady() {
                 WeixinJSBridge.invoke(
                     'getBrandWCPayRequest', {
-                    "appId": "" + res.appId,     //公众号名称，由商户传入     
-                    "timeStamp": "" + res.timeStamp,         //时间戳，自1970年以来的秒数     
-                    "nonceStr": "" + res.nonceStr, //随机串     
+                    "appId": "" + res.appId,     //公众号名称，由商户传入
+                    "timeStamp": "" + res.timeStamp,         //时间戳，自1970年以来的秒数
+                    "nonceStr": "" + res.nonceStr, //随机串
                     "package": "" + res.package,
-                    "signType": "" + res.signType,         //微信签名方式：     
-                    "paySign": "" + res.paySign //微信签名 
+                    "signType": "" + res.signType,         //微信签名方式：
+                    "paySign": "" + res.paySign //微信签名
                 },
                     function (res) {
                         if (res.err_msg == "get_brand_wcpay_request:ok") {
@@ -54,9 +54,9 @@ class UserPayPageController extends BaseController {
                 if (document.addEventListener) {
                     document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
                 } else {
-                    this.displayView.addChild(new TipView("当前浏览器环境好像不支持", ANIMATION_TYPE.SCALE_STAY, false));
-                    this.displayView.exml_submitBtn.touchEnabled = true;
+                    this.displayView.addChild(new TipView("当前环境不支持，请尝试在手机微信内访问", ANIMATION_TYPE.SCALE_STAY, false));
                 }
+                this.displayView.exml_submitBtn.touchEnabled = true;
             } else {
                 onBridgeReady();
             }

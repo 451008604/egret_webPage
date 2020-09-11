@@ -6,6 +6,7 @@ class TipView extends eui.Component {
     private isRepetition: boolean = null;
     static isRepetition: boolean = true;
     private call = { callBack: null, thisObject: null };
+    private pos: { X: number, Y: number } = null;
 
     /**
      * 提示
@@ -14,8 +15,9 @@ class TipView extends eui.Component {
      * @param _isRepetition 是否重复弹出（为false时  全局同一时间只能弹出一个弹框），默认为：true
      * @param _callBack 回调函数，默认为：null
      * @param _thisObject 回调作用域，默认为：null
+     * @param _pos 出现位置。默认舞台中心。
      */
-    constructor(_text: string, _type: number, _isRepetition: boolean = true, _callBack: Function = null, _thisObject: Object = null) {
+    constructor(_text: string, _type: number, _isRepetition: boolean = true, _callBack: Function = null, _thisObject: Object = null, _pos: { X: number, Y: number } = null) {
         super();
         this.skinName = "TipViewSkin";
 
@@ -24,6 +26,7 @@ class TipView extends eui.Component {
         this.isRepetition = _isRepetition;
         this.call.callBack = _callBack;
         this.call.thisObject = _thisObject;
+        this.pos = _pos;
     }
 
     childrenCreated() {
@@ -32,8 +35,13 @@ class TipView extends eui.Component {
         this.exml_text.text = this.text;
         this.anchorOffsetX = this.width / 2;
         this.anchorOffsetY = this.height / 2;
-        this.x = Global.STAGE_WIDTH / 2;
-        this.y = Global.STAGE_HEIGHT / 2;
+        if (this.pos) {
+            this.x = this.pos.X;
+            this.y = this.pos.Y;
+        } else {
+            this.x = Global.STAGE_WIDTH / 2;
+            this.y = Global.STAGE_HEIGHT / 2;
+        }
 
         if (!TipView.isRepetition) {
             this.parent && this.parent.removeChild(this);
@@ -42,6 +50,7 @@ class TipView extends eui.Component {
         if (!this.isRepetition) {
             TipView.isRepetition = this.isRepetition;
         }
+        egret.Tween.removeTweens(this);
         switch (this.type) {
             case ANIMATION_TYPE.SCALE_STAY_UP:
                 this.playAnimation1();

@@ -5,7 +5,7 @@
 		<e:Group y="0" x="0">
 			<e:Rect height="80" fillColor="0xffffff" anchorOffsetY="0" y="0" horizontalCenter="0" width="720"/>
 			<e:Label id="exml_xueYuanBianHao" text="学员编号：2524" textColor="0x42a2dd" fontFamily="SimHei" size="26" left="22" verticalCenter="0"/>
-			<e:Button id="exml_tip" label="正常" skinName="skins.Button2Skin" anchorOffsetX="0" anchorOffsetY="0" height="32.63" right="34" verticalCenter="0"/>
+			<e:Button id="exml_tip" right="34" verticalCenter="0" visible="true" skinName="skins.Button2Skin" label="正常"/>
 			<e:Rect width="700" height="2" x="20" y="77" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xffffff" strokeWeight="1" strokeColor="0xcdcdcd" scaleX="1" scaleY="1"/>
 		</e:Group>
 		<e:Group y="10" x="0">

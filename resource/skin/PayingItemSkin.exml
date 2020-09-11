@@ -11,7 +11,7 @@
 					<e:HorizontalLayout gap="0" horizontalAlign="left" verticalAlign="middle"/>
 				</e:layout>
 			</e:Group>
-			<e:Button id="exml_tip" label="已完成" skinName="skins.Button2Skin" anchorOffsetX="0" anchorOffsetY="0" height="32.63" right="34" verticalCenter="0"/>
+			<e:Button id="exml_tip" label="已完成" skinName="skins.Button2Skin" anchorOffsetX="0" anchorOffsetY="0" right="34" verticalCenter="0"/>
 			<e:Rect width="700" height="2" x="20" y="77" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" strokeWeight="1" strokeColor="0xCDCDCD" scaleX="1" scaleY="1"/>
 		</e:Group>
 		<e:Group y="30" x="0">

@@ -12,7 +12,7 @@ class PayingPageController extends BaseController {
 
     public arrayCollection: eui.ArrayCollection;
     private infoList: PayingItemData[] = [];
-    private pageIndex: number = 0;
+    private pageIndex: number = 1;
 
     constructor() {
         super();
